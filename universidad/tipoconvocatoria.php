@@ -914,7 +914,7 @@
 
 
 <!-- script para ajuntar desde la carpeta codigojs -->
-<script src="codigoJs/convocatorias.js"></script>
+<script src="codigoJs/tipoconvocatorias.js"></script>
 
 
 </body>
