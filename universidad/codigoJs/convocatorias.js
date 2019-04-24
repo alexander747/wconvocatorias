@@ -160,8 +160,8 @@ var borrarconvocatoria = function(){
 var dataactualizar= function(body,table){
   $(body).on("click","button.editarconvocatoria",function(){
     var data = table.row($(this).parents("tr")).data();
-    var seleccionado=data.tipc_id;
-    console.log(seleccionado);
+    // var seleccionado=data.tipc_id;
+    // console.log(seleccionado);
     // $.ajax({
     //   method:"POST",
     //   url:"registros/registro_convocatorias.php",
@@ -172,19 +172,12 @@ var dataactualizar= function(body,table){
     //   }
     // });
     if (data.estado==1) {
-
           $("#radio1").prop("checked", true);
-
         }
-
         else{
-
           $("#radio2").prop("checked", true);
-
         }
 
-
-    console.log(data);
     $("#actnombre").val(data.tipc_nombre);
     $("#actdescripcion").val(data.tipc_descripcion);
     $("#actsigla").val(data.tipc_sigla);
