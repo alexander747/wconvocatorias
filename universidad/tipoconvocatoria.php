@@ -576,7 +576,7 @@
 
       <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
-          <button onclick="cargarcombodepartamentos();" id="buttoAddCity" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Registrar Convocatoria</button>
+          <button onclick="cargarcombodepartamentos();" id="buttoAddCity" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Registrar Tipo Convocatoria</button>
        </div>
     </div>
 
@@ -625,14 +625,14 @@
     <div class="modal-dialog" style="width: 70%">
       <div class="modal-content" >
         <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel">Registrar Convocatoria</h4>
+          <h4 class="modal-title" id="myModalLabel">Registrar Tipo Convocatoria</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
        </div>
        <form id="frmDatos" method="POST" enctype="multipart/form-data" >
           <div class="modal-body">
 
             <div class="form-group">
-              <label for="message-text" class="control-label">Nombre Convocatorias:</label>
+              <label for="message-text" class="control-label">Nombre Convocatoria:</label>
               <textarea class="form-control" id="nombreconvocatoria" name="nombreconvocatoria" style="height: 40px" required></textarea>
            </div>
 
@@ -663,7 +663,7 @@
 
           <div class="form-group">
              <label for="message-text" class="control-label">Url:</label>
-             <textarea class="form-control" id="url" name="url" style="height: 40px" required></textarea>
+             <input type="url" name="url" style="height: 40px" class="form-control" required>
           </div>
 
           <div>
@@ -692,14 +692,14 @@
     <div class="modal-dialog" style="width: 70%">
       <div class="modal-content" >
         <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel">Actualizar Convocatoria</h4>
+          <h4 class="modal-title" id="myModalLabel">Actualizar  Tipo Convocatoria</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
        </div>
        <form id="frmDatos2" method="POST" enctype="multipart/form-data" >
           <div class="modal-body">
 
              <div class="form-group">
-              <label for="message-text" class="control-label">Nombre Convocatorias:</label>
+              <label for="message-text" class="control-label">Nombre Convocatoria:</label>
               <textarea class="form-control" id="actnombre" name="actnombre" style="height: 40px" required></textarea>
            </div>
 
@@ -727,7 +727,8 @@
 
           <div class="form-group">
              <label for="message-text" class="control-label">Url:</label>
-             <textarea class="form-control" id="acturl" name="acturl" style="height: 40px" required></textarea>
+             <!-- <textarea class="form-control" id="acturl" name="acturl" style="height: 40px" required></textarea> -->
+             <input type="url" id="acturl" name="acturl" style="height: 40px" class="form-control" required>
           </div>
 
 
@@ -752,13 +753,13 @@
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<!-- /row modal borrar departamento-->
+<!-- /row modal borrar -->
 <div class="row">
   <div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog" style="width: 70%">
       <div class="modal-content" >
         <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel">Borrar Convocatoria</h4>
+          <h4 class="modal-title" id="myModalLabel">Borrar Tipo Convocatoria</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
        </div>
        <form id="frmDatos3" method="POST" enctype="multipart/form-data" >
