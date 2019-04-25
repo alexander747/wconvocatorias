@@ -178,10 +178,16 @@ var dataactualizar= function(body,table){
           $("#radio2").prop("checked", true);
         }
 
+    if(data.tipc_url=='convocatorias.php'){
+      $("#radio5").prop("checked",true);
+    }
+    else{
+      $("#radio6").prop("checked",true);
+    }    
+
     $("#actnombre").val(data.tipc_nombre);
     $("#actdescripcion").val(data.tipc_descripcion);
     $("#actsigla").val(data.tipc_sigla);
-    $("#acturl").val(data.tipc_url);
     $("#id").val(data.tipc_id);
   });
 }

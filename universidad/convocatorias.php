@@ -634,7 +634,7 @@
     </div>
 
     <!-- Row -->
-    <div class="row">
+    <div class="row" id="convocatorias">
       <div class="col-md-6">
         <div class="card text-white bg-info">
           <div class="card-header">

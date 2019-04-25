@@ -643,10 +643,6 @@
 
            <div class="form-group">
             <label for="message-text" class="control-label">Estado:</label>
-              <!-- <select name="estado" id="estado" class="custom-select" required="">
-                <option value="activo" selected>Activo</option>
-                <option value="inactivo" selected>Inactivo</option>
-              </select> -->
               <div>
                 <input type="radio" class="check" id="flat-radio-1" name="estado" data-radio="iradio_flat-red" value="1">
                 <label for="flat-radio-1">Activo</label><br>
@@ -662,9 +658,15 @@
           </div>
 
           <div class="form-group">
-             <label for="message-text" class="control-label">Url:</label>
-             <input type="url" name="url" style="height: 40px" class="form-control" required>
+            <label for="message-text" class="control-label">Destino:</label>
+            <div>
+              <input type="radio" class="check" id="radio3" name="url" data-radio="iradio_flat-red" value="ciudades.php">
+              <label for="radio3">primer formulario</label><br>
+              <input type="radio" class="check" id="radio4" name="url" checked data-radio="iradio_flat-red" value="departamentos.php">
+              <label for="radio4">segundo formulario</label>
+            </div>
           </div>
+
 
           <div>
              <input type="hidden" id="accion" name="accion" value="3">
@@ -726,12 +728,14 @@
           </div>
 
           <div class="form-group">
-             <label for="message-text" class="control-label">Url:</label>
-             <!-- <textarea class="form-control" id="acturl" name="acturl" style="height: 40px" required></textarea> -->
-             <input type="url" id="acturl" name="acturl" style="height: 40px" class="form-control" required>
+              <label for="message-text" class="control-label">Destino:</label>
+               <div>
+                <input type="radio" class="check" id="radio5" name="acturl" data-radio="iradio_flat-red" value="ciudades.php">
+                <label for="radio5">primer formulario</label><br>
+                <input type="radio" class="check" id="radio6" name="acturl" data-radio="iradio_flat-red" value="departamentos.php">
+                <label for="radio6">segundo formulario</label>
+              </div>
           </div>
-
-
 
            <div>
               <input type="hidden" id="accion" name="accion" value="6">
