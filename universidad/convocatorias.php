@@ -635,57 +635,10 @@
 
     <!-- Row -->
     <div class="row" id="convocatorias">
-      <div class="col-md-6">
-        <div class="card text-white bg-info">
-          <div class="card-header">
-            <h4 class="m-b-0 text-white">I+D+I</h4></div>
-            <div class="card-body">
-              <h3 class="card-title">I+D+I</h3>
-              <p class="card-text">Convocatoria dirigida a todas las personas</p>
-              <a href="javascript:void(0)" class="btn btn-dark">Registrarse</a>
-            </div>
-          </div>
-        </div>
+      
 
-        <div class="col-md-6">
-          <div class="card text-white bg-primary">
-            <div class="card-header">
-              <h4 class="m-b-0 text-white">JOVENES INVESTIGADORES</h4></div>
-              <div class="card-body">
-                <h3 class="card-title">JOVENES INVESTIGADORES</h3>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="javascript:void(0)" class="btn btn-dark">Registrarse</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card text-white bg-warning">
-              <div class="card-header">
-                <h4 class="m-b-0 text-white">SEMILLERO DE INVESTIGACIÓN</h4></div>
-                <div class="card-body">
-                  <h3 class="card-title">SEMILLERO DE INVESTIGACIÓN</h3>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="javascript:void(0)" class="btn btn-dark">Registrarse</a>
-                </div>
-              </div>
-            </div>
-        
-            <div class="col-md-6">
-              <div class="card text-white bg-success">
-                <div class="card-header">
-                  <h4 class="m-b-0 text-white">UEES</h4></div>
-                  <div class="card-body">
-                    <h3 class="card-title">UEES</h3>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="javascript:void(0)" class="btn btn-dark">Registrarse</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!-- End Row -->
-
+    </div>
+    <!-- End Row -->
 
           </div>
         </div>
