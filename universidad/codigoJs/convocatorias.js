@@ -24,7 +24,7 @@ var listarconvocatorias = function(){
 					<div class="card-body">
 					<h3 class="card-title">${datos.data[i].tipc_nombre}</h3>
 					<p class="card-text">${datos.data[i].tipc_descripcion}</p>
-					<a href="${datos.data[i].tipc_url}" class="btn btn-dark">Registrarse</a>
+					<a href="${datos.data[i].tipc_url}?id=${datos.data[i].tipc_id}" class="btn btn-dark">Registrarse</a>
 					</div>
 					</div>
 					</div>`;

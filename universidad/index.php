@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <!-- <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png"> -->
-    <title>Univida</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
     
     <!-- page css -->
     <link href="dist/css/pages/login-register-lock.css" rel="stylesheet">
@@ -26,71 +26,61 @@
 <![endif]-->
 </head>
 
-<body class="skin-default card-no-border">
+<body>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
     <div class="preloader">
         <div class="loader">
             <div class="loader__figure"></div>
-            <p class="loader__label">Univida</p>
+            <p class="loader__label">Elite admin</p>
         </div>
     </div>
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <section id="wrapper">
-        <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">
-            <div class="login-box card">
-                <div class="card-body">
-                    <form class="form-horizontal form-material" id="loginform" action="index.html">
-                        <h3 class="text-center m-b-20">Iniciar Sesión</h3>
-                        <div class="form-group ">
-                            <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" placeholder="Username"> </div>
+    <section id="wrapper" class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);">
+        <div class="login-box card">
+            <div class="card-body">
+                <form class="form-horizontal form-material text-center" id="loginform" action="index.html">
+                    <a href="javascript:void(0)" class="db"><img src="../assets/images/logo-icon.png" alt="Home" /><br/><img src="../assets/images/logo-text.png" alt="Home" /></a>
+                    <div class="form-group m-t-40">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Usuario">
                         </div>
-                        <div class="form-group">
-                            <div class="col-xs-12">
-                                <input class="form-control" type="password" required="" placeholder="Password"> </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password" required="" placeholder="Contraseña">
                         </div>
-                        <div class="form-group row">
-                            <div class="col-md-12">
-                                <div class="d-flex no-block align-items-center">
-                                    <div class="ml-auto">
-                                        <a href="javascript:void(0)" id="to-recover" class="text-muted"><i class="fas fa-lock m-r-5"></i> ¿Olvidó su contraseña?</a> 
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Iniciar sesión</button>
                         </div>
-                        <div class="form-group text-center">
-                            <div class="col-xs-12 p-b-20">
-                                <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Ingresar</button>
-                            </div>
+                    </div>
+                </form>
+                <form class="form-horizontal" id="recoverform" action="index.html">
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <h3>Recover Password</h3>
+                            <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
                         </div>
-                     
-                    </form>
-                    <form class="form-horizontal" id="recoverform" action="index.php">
-                        <div class="form-group ">
-                            <div class="col-xs-12">
-                                <h3>Recuperar Contraseña</h3>
-                                <p class="text-muted">Ingrese su correo electronico para enviarle su nueva contraseña! </p>
-                            </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Email">
                         </div>
-                        <div class="form-group ">
-                            <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" placeholder="Correo"> </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
                         </div>
-                        <div class="form-group text-center m-t-20">
-                            <div class="col-xs-12">
-                                <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
-    
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
@@ -117,6 +107,10 @@
             $("#recoverform").fadeIn();
         });
     </script>
+
+<!-- codigo para enlaces js-->
+<script src="codigoJs/sesion.js"></script>
+
     
 </body>
 
