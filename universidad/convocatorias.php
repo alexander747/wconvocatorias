@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-	<title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+	<title> template</title>
 	<link href="../assets/node_modules/datatables/media/css/dataTables.bootstrap4.css" rel="stylesheet">
 	<!-- Custom CSS -->
 	<link href="dist/css/style.min.css" rel="stylesheet">
