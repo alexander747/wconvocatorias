@@ -160,17 +160,6 @@ var borrarconvocatoria = function(){
 var dataactualizar= function(body,table){
   $(body).on("click","button.editarconvocatoria",function(){
     var data = table.row($(this).parents("tr")).data();
-    // var seleccionado=data.tipc_id;
-    // console.log(seleccionado);
-    // $.ajax({
-    //   method:"POST",
-    //   url:"registros/registro_tipoconvocatorias.php",
-    //   data:{"accion":5,"seleccionado":seleccionado},
-    //   success:function(res){
-    //     $("#actestado").html(res);
-    //     console.log(res);
-    //   }
-    // });
     if (data.estado==1) {
           $("#radio1").prop("checked", true);
         }
