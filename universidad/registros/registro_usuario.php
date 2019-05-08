@@ -1,6 +1,6 @@
 <?php
 // include '../conexion/conexion.php';
-// require_once __DIR_. '/../conexion/pass_crypt.php';
+require_once __DIR__.'/../conexion/pass_crypt.php';
 
 
 $server='localhost';
@@ -21,14 +21,15 @@ if(isset($_POST['accion'])){
 else{
   $accion=1;
 }
- $accion=$_POST['accion'];
 
 switch($accion){
 
     case 1://listar todos los usuarios
 
     $arreglo = array();
-    $query ="SELECT * FROM usuarios";
+    $query ="SELECT usu_id,departamento_nacimiento,ciudad_nacimiento,Programas_pro_id,tipo_usuario_tipu_id,usu_departamento_residencia,usu_ciudad_residencia,usu_nombres,
+    usu_apellidos,usu_identificacion,usu_tipo_identificacion,usu_fecha_nacimiento,usu_direccion,usu_barrio,usu_telefono,usu_correo,usu_nivel_formacion,usu_profesion,
+    usu_password,tipu_id,tipu_nombre,pro_id,pro_codigo,pro_nombre from usuarios inner join tipo_usuario on(tipo_usuario_tipu_id=tipu_id) inner join programas on(pro_id=Programas_pro_id)";
     $resultado = mysqli_query($conexion,$query);
     if (!$resultado) {
       die("error");
@@ -46,96 +47,97 @@ switch($accion){
 
 
 
-    case 2: //borrar un departamento
-    $id_usuario = $_POST['idborrar'];
-    $query = "DELETE from usuarios where usu_id = '$id_usuario'";
-    $resultado = mysqli_query($conexion, $query);
-    if (!$resultado)
-      $informacion["respuesta"] = "ERROR";
-    else
-      $informacion["respuesta"] = "BIEN";
-    echo json_encode($informacion);
-    break;
+  //   case 2: //borrar un departamento
+  //   $id_usuario = $_POST['idborrar'];
+  //   $query = "DELETE from usuarios where usu_id = '$id_usuario'";
+  //   $resultado = mysqli_query($conexion, $query);
+  //   if (!$resultado)
+  //     $informacion["respuesta"] = "ERROR";
+  //   else
+  //     $informacion["respuesta"] = "BIEN";
+  //   echo json_encode($informacion);
+  //   break;
 
 
-    case 3: //Actualizar
-    $nombres = $_POST['nombreUsuario2'];
-    $apellidos = $_POST['apellidosUsuario2'];
-    $identificacion = $_POST['identificacionUsuario2'];
-    $Tidentificacion = $_POST['tipoIdusuario2'];
-    $Fnacimiento = $_POST['nacimientoUsuario2'];
-    $Cnacimiento = $_POST['ciudadNUsuario2'];
-    $Cresidencia = $_POST['ciudadRUsuario2'];
-    $direccion = $_POST['direccionusuario2'];
-    $barrio = $_POST['barrioUsuario2'];
-    $telefono = $_POST['telefonoUsuario2'];
-    $correo = $_POST['correoUsuario2'];
-    $Nformacion = $_POST['formacionUsuario2'];
-    $profesion = $_POST['Profesionusuario2'];
-    $Tusuario = $_POST['tipoUsuario2'];
-    // $password = $_POST['passwordUsuario2'];
-    $id = $_POST['id'];
-    $query = "UPDATE usuarios SET usu_nombres = '$nombres', usu_apellidos = '$apellidos',usu_identificacion = '$identificacion',
-    usu_tipoidentificacion = '$Tidentificacion', usu_fechaNacimiento = '$Fnacimiento', usu_ciudadNacimiento = '$Cnacimiento',
-    usu_ciudadResidencia = '$Cresidencia',usu_direccion = '$direccion', usu_telefono = '$telefono', usu_correo = '$correo',
-    usu_nivelFormacion = '$Nformacion', usu_profesion = '$profesion', usu_tipoUsuario = '$Tusuario'  WHERE usu_id = '$id'";
-    $resultado = mysqli_query($conexion, $query);
-    if (!$resultado)
-      $informacion["respuesta"] = "ERROR";
-    else
-      $informacion["respuesta"] = "BIEN";
-    echo json_encode($informacion);
-    break;
+  //   case 3: //Actualizar
+  //   $nombres = $_POST['nombreUsuario2'];
+  //   $apellidos = $_POST['apellidosUsuario2'];
+  //   $identificacion = $_POST['identificacionUsuario2'];
+  //   $Tidentificacion = $_POST['tipoIdusuario2'];
+  //   $Fnacimiento = $_POST['nacimientoUsuario2'];
+  //   $Cnacimiento = $_POST['ciudadNUsuario2'];
+  //   $Cresidencia = $_POST['ciudadRUsuario2'];
+  //   $direccion = $_POST['direccionusuario2'];
+  //   $barrio = $_POST['barrioUsuario2'];
+  //   $telefono = $_POST['telefonoUsuario2'];
+  //   $correo = $_POST['correoUsuario2'];
+  //   $Nformacion = $_POST['formacionUsuario2'];
+  //   $profesion = $_POST['Profesionusuario2'];
+  //   $Tusuario = $_POST['tipoUsuario2'];
+  //   // $password = $_POST['passwordUsuario2'];
+  //   $id = $_POST['id'];
+  //   $query = "UPDATE usuarios SET usu_nombres = '$nombres', usu_apellidos = '$apellidos',usu_identificacion = '$identificacion',
+  //   usu_tipoidentificacion = '$Tidentificacion', usu_fechaNacimiento = '$Fnacimiento', usu_ciudadNacimiento = '$Cnacimiento',
+  //   usu_ciudadResidencia = '$Cresidencia',usu_direccion = '$direccion', usu_telefono = '$telefono', usu_correo = '$correo',
+  //   usu_nivelFormacion = '$Nformacion', usu_profesion = '$profesion', usu_tipoUsuario = '$Tusuario'  WHERE usu_id = '$id'";
+  //   $resultado = mysqli_query($conexion, $query);
+  //   if (!$resultado)
+  //     $informacion["respuesta"] = "ERROR";
+  //   else
+  //     $informacion["respuesta"] = "BIEN";
+  //   echo json_encode($informacion);
+  //   break;
 
-    case 4: //buscar departamento
-    $id = $_POST['id'];
-    $query = "SELECT * from usuarios usu where usu.usu_id = '$id'";
-    $resultado = mysqli_query($conexion, $query);
-    if (!$resultado) {
-     die("Error");
-   }else{
-     while ($data=mysqli_fetch_assoc($resultado)) {
-       $arreglo["data"][] = $data;
-     }
-     echo json_encode($arreglo);
-   }
-   mysqli_free_result($resultado);
-   break;
+  //   case 4: //buscar departamento
+  //   $id = $_POST['id'];
+  //   $query = "SELECT * from usuarios usu where usu.usu_id = '$id'";
+  //   $resultado = mysqli_query($conexion, $query);
+  //   if (!$resultado) {
+  //    die("Error");
+  //  }else{
+  //    while ($data=mysqli_fetch_assoc($resultado)) {
+  //      $arreglo["data"][] = $data;
+  //    }
+  //    echo json_encode($arreglo);
+  //  }
+  //  mysqli_free_result($resultado);
+  //  break;
 
-   case 5: //guardar un departamento
+   case 5: //guardar 
 
    $nombres = $_POST['nombreUsuario'];
-   $apellidos = $_POST['apellidosUsuario'];
-   $identificacion = $_POST['identificacionUsuario'];
-   $Tidentificacion = $_POST['tipoIdusuario'];
-   $Fnacimiento = $_POST['nacimientoUsuario'];
-   $Cnacimiento = $_POST['ciudadNUsuario'];
-   $Cresidencia = $_POST['ciudadRUsuario'];
-   $direccion = $_POST['direccionusuario'];
-   $barrio = $_POST['barrioUsuario'];
-   $telefono = $_POST['telefonoUsuario'];
+   $apellidos = $_POST['apellidoUsuario'];
+   $tipoIdentificacion = $_POST['tipoIdentificacionUsuario'];
+   $numeroIdentificacion = $_POST['identificacionUsuario'];
+   $deptoNacimiento=$_POST['deptonacimiento'];
+   $ciudadNacimiento = $_POST['ciudadNacimiento'];
+   $deptoResidencia=$_POST['deptoresidencia'];
+   $ciudadResidencia = $_POST['ciudadResidencia'];
+   $fechaNacimiento = $_POST['fechaNacimiento'];
+   $direccion = $_POST['direccion'];
+   $barrio = $_POST['barrio'];
+   $telefono = $_POST['telefono'];
    $correo = $_POST['correoUsuario'];
-   $Nformacion = $_POST['formacionUsuario'];
-   $profesion = $_POST['Profesionusuario'];
-   $Tusuario = $_POST['tipoUsuario'];
-   $password = $_POST['passwordUsuario'];
-   $query = "SELECT usu.usu_id, usu.usu_nombres, usu.usu_apellidos, usu.usu_identificacion, usu.usu_tipoidentificacion, usu.usu_fechaNacimiento,
-   usu.usu_ciudadNacimiento, usu.usu_ciudadResidencia, usu.usu_direccion, usu.usu_barrio, usu.usu_telefono, usu.usu_correo,
-   usu.usu_nivelFormacion, usu.usu_profesion, usu.usu_tipoUsuario, usu.usu_password FROM usuarios usu where  usu.usu_nombres= '$nombres'";
+   $nivelFormacion=$_POST['formacionUsuario'];
+   $programa=$_POST['programas'];
+   $tipoUsuario=$_POST['tipousuario'];
+   $profesion = $_POST['profesion'];
+   $password = $_POST['password'];
+
+   $query = "SELECT * FROM usuarios where usu_identificacion= '$numeroIdentificacion'";
    $resultado = mysqli_query($conexion, $query);
    $existe = mysqli_num_rows($resultado);
    if($existe > 0){
-   $informacion["respuesta"] = "EXISTE";
-    echo json_encode($informacion);
-  }else{
-    // $encriptarpass = new Pass_crypt();
-    // $passencriptada=$encriptarpass->create_hash($password);
+     $informacion["respuesta"] = "EXISTE";
+     echo json_encode($informacion);
+   }
+   else{
+    $encriptarpass = new Pass_crypt();
+    $passencriptada=$encriptarpass->create_hash($password);
 
-    $query2 = "INSERT INTO usuarios (usu_nombres,usu_apellidos,usu_identificacion,usu_tipoidentificacion,usu_fechaNacimiento,
-    usu_ciudadNacimiento,usu_ciudadResidencia,usu_direccion,usu_barrio,usu_telefono,usu_correo,usu_nivelFormacion,
-  usu_profesion,usu_tipoUsuario,usu_password) values ('$nombres','$apellidos','$identificacion','$Tidentificacion','$Fnacimiento',
-  '$Cnacimiento','$Cresidencia','$direccion','$barrio','$telefono','$correo','$Nformacion','$profesion','$Tusuario','$password')";
-      //el id no lo ponemos ya que es autoincremental
+   $query2 = "INSERT INTO usuarios(departamento_nacimiento, ciudad_nacimiento,Programas_pro_id,tipo_usuario_tipu_id,usu_departamento_residencia,usu_ciudad_residencia,usu_nombres,usu_apellidos, usu_identificacion, usu_tipo_identificacion, usu_fecha_nacimiento, usu_direccion, usu_barrio, usu_telefono, usu_correo, usu_nivel_formacion, usu_profesion, usu_password) VALUES('$deptoNacimiento','$ciudadNacimiento','$programa','$tipoUsuario','$deptoResidencia','$ciudadResidencia','$nombres','$apellidos','$numeroIdentificacion','$tipoIdentificacion','$fechaNacimiento','$direccion','$barrio','$telefono','$correo','$nivelFormacion','$profesion','$passencriptada')";
+
+  //     //el id no lo ponemos ya que es autoincremental
     $resultado = mysqli_query($conexion, $query2);
     if (!$resultado)
       $informacion["respuesta"] = "ERROR";
@@ -143,7 +145,48 @@ switch($accion){
       $informacion["respuesta"] = "BIEN";
     echo json_encode($informacion);
   }
+    break;
+
+  case 6://listar programas
+  $cad='';
+  $q="SELECT * from programas";
+  $r=mysqli_query($conexion,$q);
+  while ($data=mysqli_fetch_assoc($r)) {
+    $cad.='<option value="'.$data["pro_id"].'">'.$data["pro_nombre"]."</option>";
+  }
+  echo $cad;
   break;
+
+ case 7://listar tipo usuario
+ $cad='';
+ $q="SELECT * FROM tipo_usuario";
+ $r=mysqli_query($conexion,$q);
+ while ($data=mysqli_fetch_assoc($r)) {
+   $cad.='<option value="'.$data["tipu_id"].'">'.$data["tipu_nombre"]."</option>";
+ }
+ echo $cad;
+ break;
+
+  case 8://listar departamentos de nacimiento y residencia
+ $cad='';
+ $q="SELECT * FROM departamento";
+ $r=mysqli_query($conexion,$q);
+ while ($data=mysqli_fetch_assoc($r)) {
+   $cad.='<option value="'.$data["dep_id"].'">'.$data["dep_nombre"]."</option>";
+ }
+ echo $cad;
+ break;
+
+   case 9://listar ciudades de nacimiento y residencia
+ $cad='';
+ $iddepartamento=$_POST['idDepto'];
+ $q="SELECT * FROM ciudad WHERE departamento_dep_id='$iddepartamento'";
+ $r=mysqli_query($conexion,$q);
+ while ($data=mysqli_fetch_assoc($r)) {
+   $cad.='<option value="'.$data["ciu_id"].'">'.$data["ciu_nombre"]."</option>";
+ }
+ echo $cad;
+ break;
 
 
 }

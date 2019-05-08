@@ -1,8 +1,12 @@
  $(document).ready(function(){
  	listar(1);
- 	guardar();
- 	actualizar();
- 	borrar();
+  listartipousuario();
+  listarprogramas();
+  listardepartamentonacimiento();
+  listarciudadnacimiento();
+  listardepartamenresidencia();
+  listarciudadresidencia();
+  guardar();
  });
 
  var listar = function(accion){
@@ -19,32 +23,111 @@
  			"data": {"accion":accion}
  		},
  		"columns":[
-		{"data":"usu_id"},
  		{"data":"usu_nombres"},
  		{"data":"usu_apellidos"},
-  //  {"data":"usu_identificacion"},
-  //  {"data":"usu_tipoidentificacion"},
-    //{"data":"usu_fechaNacimiento"},
-    //{"data":"usu_ciudadNacimiento"},
-    //{"data":"usu_ciudadResidencia"},
-    //{"data":"usu_direccion"},
-    //{"data":"usu_barrio"},
-    //{"data":"usu_telefono"},
-    {"data":"usu_correo"},
-    //{"data":"usu_nivelFormacion"},
- 		//{"data":"usu_profesion"},
- 		{"data":"usu_tipoUsuario"},
-    //{"data":"usu_password"},
+   {"data":"usu_correo"},
+   {"data":"tipu_nombre"},
 
- 		{"defaultContent":"<button type='button' class='EditarUsuario btn btn-success btn-circle' data-toggle='modal' data-target='#myModal2' data-toggle='tooltip' data-placement='top' data-original-title='Ver'><i class='ti-reload'></i>   </button><button type='button' class='borrar btn btn-danger btn-circle' data-toggle='modal' data-target='#myModal3' data-toggle='tooltip' data-placement='top' data-original-title='Ver'><i class='ti-trash'></i> </button>"
- 	}
- 	]
+   {"defaultContent":"<button type='button' class='EditarUsuario btn btn-success btn-circle' data-toggle='modal' data-target='#myModal2' data-toggle='tooltip' data-placement='top' data-original-title='Ver'><i class='ti-reload'></i>   </button><button type='button' class='borrar btn btn-danger btn-circle' data-toggle='modal' data-target='#myModal3' data-toggle='tooltip' data-placement='top' data-original-title='Ver'><i class='ti-trash'></i> </button>"
+  }
+  ]
  });
  	$('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
 
- 	dataeditar("#datatableUsuario tbody",table);
- 	databorrar("#datatableUsuario tbody",table);
+ 	// dataeditar("#datatableUsuario tbody",table);
+ 	// databorrar("#datatableUsuario tbody",table);
  }
+
+ function listarprogramas(){
+  $.ajax({
+   method:"POST",
+   url:"registros/registro_usuario.php",
+   data:{"accion":6},
+   success:function(respuesta){
+    $("#programas").html(respuesta);
+   }
+  });
+ }
+
+ function listartipousuario(){
+  $.ajax({
+   method:"POST",
+   url:"registros/registro_usuario.php",
+   data:{"accion":7},
+   success:function(respuesta){
+    $("#tipousuario").html(respuesta);
+   }
+  });
+ }
+
+ function listardepartamentonacimiento(){
+  $.ajax({
+   method:"POST",
+   url:"registros/registro_usuario.php",
+   data:{"accion":8},
+   success:function(respuesta){
+    $("#deptonacimiento").html(respuesta);
+    var id = $("#deptonacimiento").val();
+    $.ajax({
+     method:"POST",
+     url:"registros/registro_usuario.php",
+     data:{"accion":9,"idDepto":id},
+     success:function(respuesta){
+      $("#ciudadNacimiento").html(respuesta);
+     }
+    });
+   }
+  });
+ }
+
+ function listarciudadnacimiento(){
+  $("#frmDatos #deptonacimiento").change(function(){
+   var id = $("#deptonacimiento").val();
+   $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":9,"idDepto":id},
+    success:function(respuesta){
+     $("#ciudadNacimiento").html(respuesta);
+    }
+   });
+  });
+ }
+
+ function listardepartamenresidencia(){
+  $.ajax({
+   method:"POST",
+   url:"registros/registro_usuario.php",
+   data:{"accion":8},
+   success:function(respuesta){
+    $("#deptoresidencia").html(respuesta);
+    var id = $("#deptoresidencia").val();
+    $.ajax({
+     method:"POST",
+     url:"registros/registro_usuario.php",
+     data:{"accion":9,"idDepto":id},
+     success:function(respuesta){
+      $("#ciudadResidencia").html(respuesta);
+     }
+    });
+   }
+  });
+ }
+
+ function listarciudadresidencia(){
+  $("#frmDatos #deptoresidencia").change(function(){
+   var id = $("#deptoresidencia").val();
+   $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":9,"idDepto":id},
+    success:function(respuesta){
+     $("#ciudadResidencia").html(respuesta);
+    }
+   });
+  });
+ }
+
 
  var databorrar = function(body,table){
  	$(body).on("click","button.borrar",function(){
@@ -70,54 +153,12 @@
           	listar(1);
           	setTimeout(function(){location.reload();},3000);
           }
-      });
+         });
  	});
  }
 
 
- var dataeditar = function(body,table){
- 	$(body).on("click","button.EditarUsuario",function(){
- 		var data = table.row($(this).parents("tr")).data();
- 		console.log(data);
- 		$("#id").val(data.usu_id);
- 		$("#nombreUsuario2").val(data.usu_nombres);
- 		$("#apellidosUsuario2").val(data.usu_apellidos);
-    $("#identificacionUsuario2").val(data.usu_identificacion);
-    $("#tipoIdusuario2").val(data.usu_tipoidentificacion);
-    $("#nacimientoUsuario2").val(data.usu_fechaNacimiento);
-    $("#ciudadNUsuario2").val(data.usu_ciudadNacimiento);
-    $("#ciudadRUsuario2").val(data.usu_ciudadResidencia);
-    $("#direccionusuario2").val(data.usu_direccion);
-    $("#barrioUsuario2").val(data.usu_barrio);
-    $("#telefonoUsuario2").val(data.usu_telefono);
-    $("#correoUsuario2").val(data.usu_correo);
-    $("#formacionUsuario2").val(data.usu_nivelFormacion);
-    $("#Profesionusuario2").val(data.usu_profesion);
-    $("#tipoUsuario2").val(data.usu_tipoUsuario);
-    // $("#passwordUsuario2").val(data.usu_password);
-     	});
- }
 
- var actualizar = function(){
- 	$("#frmDatos2").on("submit",function(e){
- 		e.preventDefault();
- 		var datos = new FormData($("#frmDatos2")[0]);
- 		$.ajax({
- 			method:"POST",
- 			url:"registros/registro_usuario.php",
- 			data:datos,
-          contentType: false, //importante enviar este parametro en false
-          processData: false,
-          cache:false,
-          success:function(respuesta){
-          	var resp = JSON.parse(respuesta);
-          	mostrar_mensaje(resp);
-          	listar(1);
-          	setTimeout(function(){location.reload();},3000);
-          }
-      });
- 	});
- }
 
 
  var guardar = function(){
@@ -128,15 +169,16 @@
  			method:"POST",
  			url:"registros/registro_usuario.php",
  			data:parametros,
-          contentType: false, //importante enviar este parametro en false
-          processData: false,
-          cache:false
-      }).done(function(info){
-      	var json_info = JSON.parse(info);
-      	mostrar_mensaje(json_info);
-      	listar(1);
-      	setTimeout(function(){location.reload();}, 3000);
-      });
+    contentType: false,
+    processData: false,
+    cache:false
+   }).done(function(info){
+    var json_info = JSON.parse(info);
+    mostrar_mensaje(json_info);
+    // listar(1);
+          // setTimeout(function(){location.reload();}, 3000);
+          console.log(info);
+         });
   });
  }
 
