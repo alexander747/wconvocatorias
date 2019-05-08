@@ -25,13 +25,13 @@ switch ($accion) {
 	}else{
 		$respuesta = mysqli_fetch_array($r);
 		if ($respuesta>0) {
-			$old=$respuesta[18];
+			$old=$respuesta[12];
 			$respass = $pass->check_value($contraseña,$old);
 			if ($respass) {
 				session_start();
 				$_SESSION['id']=$respuesta[0];
-				$_SESSION['nombre']=$respuesta[8];
-				$_SESSION['apellido']=$respuesta[9];
+				$_SESSION['nombre']=$respuesta[1];
+				$_SESSION['apellido']=$respuesta[2];
 				echo "done";
 			}
 		}else{

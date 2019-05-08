@@ -6,6 +6,8 @@
   listarciudadnacimiento();
   listardepartamenresidencia();
   listarciudadresidencia();
+  listarciudadnacimientoactualizar();
+  listarciudadresideciaactualizar();
   guardar();
  });
 
@@ -45,24 +47,97 @@
    $("#actnombreUsuario").val(data.usu_nombres);
    $("#actapellidoUsuario").val(data.usu_apellidos);
    $("#actidentificacionUsuario").val(data.usu_identificacion);
-   //tipo de identificacion
-   //departamento de nacimiento
-   //ciudad de nacimiento
-   //departamento de residencia
-   //ciudad de residencia
-   //nivel de formacion
-   //programas
-   //tipo de usuario
-
-
+   $('#acttipoIdentificacionUsuario option[value="'+data.usu_tipo_identificacion+'"]').attr('selected', 'selected');
    $("#actfechaNacimiento").val(data.usu_fecha_nacimiento);
    $("#actdireccion").val(data.usu_direccion);
    $("#actbarrio").val(data.usu_barrio);
    $("#acttelefono").val(data.usu_telefono);
    $("#actnombreUsuario").val(data.usu_nombres);
-    $("#actcorreoUsuario").val(data.usu_correo);
-    $("#actprofesion").val(data.usu_profesion);
-    
+   $("#actcorreoUsuario").val(data.usu_correo);
+   $("#actprofesion").val(data.usu_profesion);
+   
+   $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":10,"ciudad":data.ciudad_nacimiento,"depto":data.idDeptoNacimiento},
+    success:function(respuesta){
+     $("#actciudadNacimiento").html(respuesta);
+     $.ajax({
+      method:"POST",
+      url:"registros/registro_usuario.php",
+      data:{"accion":11,"depto":data.idDeptoNacimiento},
+      success:function(respuesta){
+       $("#actdeptonacimiento").html(respuesta);
+      }
+     });
+    }
+   });
+
+   $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":12,"ciudad":data.ciudad_residencia,"depto":data.idDeptoResidencia},
+    success:function(respuesta){
+     $("#actciudadResidencia").html(respuesta);
+     $.ajax({
+      method:"POST",
+      url:"registros/registro_usuario.php",
+      data:{"accion":13,"depto":data.idDeptoResidencia},
+      success:function(respuesta){
+       $("#actdeptoresidencia").html(respuesta);
+      }
+     });
+    }
+   });
+
+   $('#actformacionUsuario option[value="'+data.usu_nivel_formacion+'"]').attr('selected', 'selected');  
+
+   $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":14,"idprograma":data.Programas_pro_id},
+    success:function(respuesta){
+     $("#actprogramas").html(respuesta);
+    }
+   });
+
+    $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":15,"idtipousuario":data.tipu_id},
+    success:function(respuesta){
+     $("#acttipousuario").html(respuesta);
+    }
+   });   
+
+  });
+ }
+
+ function listarciudadresideciaactualizar(){
+  $("#frmDatos2 #actdeptoresidencia").change(function(){
+   var id = $("#actdeptoresidencia").val();
+   $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":9,"idDepto":id},
+    success:function(respuesta){
+     $("#actciudadResidencia").html(respuesta);
+    }
+   });
+  });
+ }
+
+ function listarciudadnacimientoactualizar(){
+  $("#frmDatos2 #actdeptonacimiento").change(function(){
+   var id = $("#actdeptonacimiento").val();
+   $.ajax({
+    method:"POST",
+    url:"registros/registro_usuario.php",
+    data:{"accion":9,"idDepto":id},
+    success:function(respuesta){
+     $("#actciudadNacimiento").html(respuesta);
+    }
+   });
   });
  }
 
