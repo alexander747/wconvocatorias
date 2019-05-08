@@ -43,19 +43,26 @@
    var data = table.row($(this).parents("tr")).data();
    console.log(data);
    $("#actnombreUsuario").val(data.usu_nombres);
-   $("#actapellidosUsuario").val(data.usu_apellidos);
-   $("#actidentificacionUsuario").val(data.usu_nombres);
+   $("#actapellidoUsuario").val(data.usu_apellidos);
+   $("#actidentificacionUsuario").val(data.usu_identificacion);
    //tipo de identificacion
    //departamento de nacimiento
    //ciudad de nacimiento
    //departamento de residencia
    //ciudad de residencia
+   //nivel de formacion
+   //programas
+   //tipo de usuario
+
 
    $("#actfechaNacimiento").val(data.usu_fecha_nacimiento);
    $("#actdireccion").val(data.usu_direccion);
    $("#actbarrio").val(data.usu_barrio);
    $("#acttelefono").val(data.usu_telefono);
    $("#actnombreUsuario").val(data.usu_nombres);
+    $("#actcorreoUsuario").val(data.usu_correo);
+    $("#actprofesion").val(data.usu_profesion);
+    
   });
  }
 

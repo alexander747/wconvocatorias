@@ -937,10 +937,10 @@
                      <label>Profesion :</label>
                      <textarea class="form-control" id="actprofesion" name="actprofesion" style="height: 40px" required></textarea>
                     </div>
-                    <div class="form-group col-md-6">
+                   <!--  <div class="form-group col-md-6">
                      <label>Password :</label>
                      <input type="password" class="form-control" name="actpassword" id="actpassword" style="height: 40px" required>
-                    </div>
+                    </div> -->
                    </div>
 
                    <div>
