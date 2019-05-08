@@ -34,8 +34,29 @@
  });
  	$('.buttons-copy, .buttons-csv, .buttons-print, .buttons-pdf, .buttons-excel').addClass('btn btn-primary mr-1');
 
- 	// dataeditar("#datatableUsuario tbody",table);
+ 	dataeditar("#datatableUsuario tbody",table);
  	// databorrar("#datatableUsuario tbody",table);
+ }
+
+ var dataeditar = function(body,table){
+  $(body).on("click","button.EditarUsuario",function(){
+   var data = table.row($(this).parents("tr")).data();
+   console.log(data);
+   $("#actnombreUsuario").val(data.usu_nombres);
+   $("#actapellidosUsuario").val(data.usu_apellidos);
+   $("#actidentificacionUsuario").val(data.usu_nombres);
+   //tipo de identificacion
+   //departamento de nacimiento
+   //ciudad de nacimiento
+   //departamento de residencia
+   //ciudad de residencia
+
+   $("#actfechaNacimiento").val(data.usu_fecha_nacimiento);
+   $("#actdireccion").val(data.usu_direccion);
+   $("#actbarrio").val(data.usu_barrio);
+   $("#acttelefono").val(data.usu_telefono);
+   $("#actnombreUsuario").val(data.usu_nombres);
+  });
  }
 
  function listarprogramas(){
@@ -175,10 +196,9 @@
    }).done(function(info){
     var json_info = JSON.parse(info);
     mostrar_mensaje(json_info);
-    // listar(1);
-          // setTimeout(function(){location.reload();}, 3000);
-          console.log(info);
-         });
+    listar(1);
+    setTimeout(function(){location.reload();}, 3000);
+   });
   });
  }
 

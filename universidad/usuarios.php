@@ -811,11 +811,10 @@
 
 
              <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-             <!-- /row modal actualizar usuarios-->
-             <div class="row">
+                  <!-- /row modal actualizar Usuario-->
+            <div class="row">
               <div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-               <div class="modal-dialog" style="width: 70%">
+               <div class="modal-dialog modal-lg">
                 <div class="modal-content" >
                  <div class="modal-header">
                   <h4 class="modal-title" id="myModalLabel">Actualizar Usuario</h4>
@@ -824,137 +823,146 @@
                  <form id="frmDatos2" method="POST" enctype="multipart/form-data" >
                   <div class="modal-body">
 
-                   <div class="form-group">
-                    <label for="message-text" class="control-label">Nombres:</label>
-                    <textarea class="form-control" id="nombreUsuario2" name="nombreUsuario2" style="height: 40px" required></textarea>
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label for="message-text" class="control-label">Nombres:</label>
+                     <textarea class="form-control" id="actnombreUsuario" name="actnombreUsuario" style="height: 40px" required></textarea>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                     <label for="message-text" class="control-label">Apellidos :</label>
+                     <textarea class="form-control" id="actapellidoUsuario" name="actapellidoUsuario" style="height: 40px" required></textarea>
+                    </div>
                    </div>
 
-                   <div class="form-group">
-                    <label for="message-text" class="control-label">Apellidos :</label>
-                    <textarea class="form-control" id="apellidosUsuario2" name="apellidosUsuario2" style="height: 40px" required></textarea>
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label>Tipo de Identificacion</label>
+                     <select class="custom-select col-12" id="acttipoIdentificacionUsuario" name="acttipoIdentificacionUsuario" style="height: 40px" required>
+                      <option value="CC">CC-Cedula de Ciudadania</option>
+                      <option value="TI">TI-Tarjeta de Identidad</option>
+                      <option value="CE">CE-Cedula de Extranjeria</option>
+                      <option value="PA">PA-Pasaporte</option>
+                     </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label for="message-text" class="control-label">Número de Identificación :</label>
+                     <input type="number" class="form-control" id="actidentificacionUsuario" name="actidentificacionUsuario" style="height: 40px" required>
+                    </div>
                    </div>
 
-                   <div class="form-group">
-                    <label for="message-text" class="control-label">Identificacion :</label>
-                    <textarea class="form-control" id="identificacionUsuario2" name="identificacionUsuario2" style="height: 40px" required></textarea>
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label for="deptonacimiento" class="control-label">Departamento de Nacimiento :</label>
+                     <select class="custom-select col-12" id="actdeptonacimiento" name="actdeptonacimiento" style="height: 40px" required>
+                     </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label class="control-label">Ciudad de Nacimiento:</label>
+                     <select class="custom-select col-12" id="actciudadNacimiento" name="actciudadNacimiento" style="height: 40px" required></select>
+                    </div>
                    </div>
-<!--
-																<div class="form-group">
-                                    <label>Tipo de Identificacion</label>
-                                    <select class="custom-select col-12" id="tipoIdusuario2" name="tipoIdusuario2" style="height: 40px" required>
-                                        <option selected>Seleccione una opcion...</option>
-                                        <option value="TI">TI-Tarjeta de Identidad</option>
-                                        <option value="CC">CC-Cedula de Ciudadania</option>
-                                        <option value="CE">CE-Cedula de Extranjeria</option>
-																				<option value="PA">PA-Pasaporte</option>
-                                    </select>
-                                   </div> -->
-                                   <div class="form-group">
-                                    <label for="message-text" class="control-label">Tipo de Identificacion :</label>
-                                    <textarea class="form-control" id="tipoIdusuario2" name="tipoIdusuario2" style="height: 40px" required></textarea>
-                                   </div>
 
-<!--
-
-																<label class="m-t-40">Fecha de Nacimiento</label>
-																<div class="input-group clockpicker " data-placement="bottom" data-align="top" data-autoclose="true">
-																		<input type="text" class="form-control" value="13:14" id="nacimientoUsuario" name="nacimientoUsuario" style="height: 40px" required>
-																		<div class="input-group-append">
-																				<span class="input-group-text"><i class="fa fa-clock-o"></i></span>
-																		</div>
-                 </div>-->
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Fecha de Nacimiento (Año-Mes-Dia) :</label>
-                  <textarea class="form-control" id="nacimientoUsuario2" name="nacimientoUsuario2" style="height: 40px" required></textarea>
-                 </div>
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Ciudad de Nacimiento:</label>
-                  <textarea class="form-control" id="ciudadNUsuario2" name="ciudadNUsuario2" style="height: 40px" required></textarea>
-                 </div>
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Ciudad Residencia :</label>
-                  <textarea class="form-control" id="ciudadRUsuario2" name="ciudadRUsuario2" style="height: 40px" required></textarea>
-                 </div>
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label>Departamento de Residencia</label>
+                     <select class="custom-select col-12" id="actdeptoresidencia" name="actdeptoresidencia" style="height: 40px" required></select>
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label>Ciudad de Residencia</label>
+                     <select class="custom-select col-12" id="actciudadResidencia" name="actciudadResidencia" style="height: 40px" required></select>
+                    </div>
+                   </div>
 
 
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Direccion :</label>
-                  <textarea class="form-control" id="direccionusuario2" name="direccionusuario2" style="height: 40px" required></textarea>
-                 </div>
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label>Fecha de Nacimiento</label>
+                     <input type="date" class="form-control" name="actfechaNacimiento" id="actfechaNacimiento">
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label for="direccion" class="control-label">Direccion :</label>
+                     <textarea class="form-control" id="actdireccion" name="actdireccion" style="height: 40px" required></textarea>
+                    </div>
+                   </div>
 
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Barrio :</label>
-                  <textarea class="form-control" id="barrioUsuario2" name="barrioUsuario2" style="height: 40px" required></textarea>
-                 </div>
-
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Telefono :</label>
-                  <textarea class="form-control" id="telefonoUsuario2" name="telefonoUsuario2" style="height: 40px" required></textarea>
-                 </div>
-
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Correo:</label>
-                  <textarea class="form-control" id="correoUsuario2" name="correoUsuario2" style="height: 40px" required></textarea>
-                 </div>
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Nivel de Formacion :</label>
-                  <textarea class="form-control" id="formacionUsuario2" name="formacionUsuario2" style="height: 40px" required></textarea>
-                 </div>
-																<!-- <div class="form-group">
-																		<label>Nivel de Formacion</label>
-																		<select class="custom-select col-12" id="formacionUsuario2" name="formacionUsuario2" style="height: 40px" required>
-																				<option selected>Seleccione una opcion...</option>
-																				<option value="Bachiller">Bachiller</option>
-																				<option value="Tecnico">Tecnico</option>
-																				<option value="Tecnologo">Tecnologo</option>
-																				<option value="Profesional">Profesional</option>
-																				<option value="Especializacion">Especializacion</option>
-																				<option value="Maestria">Maestria</option>
-																				<option value="Doctorado">Doctorado</option>
-																		</select>
-                 </div> -->
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Profesion :</label>
-                  <textarea class="form-control" id="Profesionusuario2" name="Profesionusuario2" style="height: 40px" required></textarea>
-                 </div>
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">Tipo de Usuario :</label>
-                  <textarea class="form-control" id="tipoUsuario2" name="tipoUsuario2" style="height: 40px" required></textarea>
-                 </div>
-
-																<!-- <div class="form-group">
-																		<label for="message-text" class="control-label">Password :</label>
-																		<textarea class="form-control" id="passwordUsuario2" name="passwordUsuario2" style="height: 40px" required></textarea>
-                 </div> -->
-
-                 <div>
-                  <input type="hidden" id="accion" name="accion" value="3">
-                  <input type="hidden" name="id" id="id">
-                 </div>
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label>Barrio :</label>
+                     <textarea class="form-control" id="actbarrio" name="actbarrio" style="height: 40px" required></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label>Telefono :</label>
+                     <textarea class="form-control" id="acttelefono" name="acttelefono" style="height: 40px" required></textarea>
+                    </div>
+                   </div>
 
 
-                 <div class="modal-footer">
-                  <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Cerrar</button>
-                  <button type="submit" id="actualizar-datatableusuario2" class="btn btn-info waves-effect waves-light">Guardar</button>
-                 </div>
+
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label>Correo:</label>
+                     <input type="email" class="form-control" id="actcorreoUsuario" name="actcorreoUsuario" style="height: 40px" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label>Nivel de Formación :</label>
+                     <select class="custom-select col-12" id="actformacionUsuario" name="actformacionUsuario" style="height: 40px" required>
+                      <option value="Bachiller">Bachiller</option>
+                      <option value="Tecnico">Tecnico</option>
+                      <option value="Tecnologo">Tecnologo</option>
+                      <option value="Profesional">Profesional</option>
+                      <option value="Especializacion">Especializacion</option>
+                      <option value="Maestria">Maestria</option>
+                      <option value="Doctorado">Doctorado</option>
+                     </select>
+                    </div>
+                   </div>
+
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label>Programas</label>
+                     <select class="custom-select col-12" id="actprogramas" name="actprogramas" style="height: 40px" required>
+                     </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label>Tipo de Usuario</label>
+                     <select class="custom-select col-12" id="acttipousuario" name="acttipousuario" style="height: 40px" required>
+                     </select>
+                    </div>
+
+                   </div>
+
+                   <div class="row">
+                    <div class="form-group col-md-6">
+                     <label>Profesion :</label>
+                     <textarea class="form-control" id="actprofesion" name="actprofesion" style="height: 40px" required></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                     <label>Password :</label>
+                     <input type="password" class="form-control" name="actpassword" id="actpassword" style="height: 40px" required>
+                    </div>
+                   </div>
+
+                   <div>
+                    <input type="hidden" id="accion" name="accion" value="3">
+                   </div>
+
+
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" id="actualizar-usuario" class="btn btn-info waves-effect waves-light">Guardar</button>
+                   </div>
+                  </div>
+                 </form>
                 </div>
-               </form>
+               </div>
               </div>
              </div>
-            </div>
-           </div>
-           <!-- /fin row modal -->
+             <!-- /fin row modal actualizar-->
 
-           <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+           <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
 
-           <!-- /row modal borrar departamento-->
+           <!-- /row modal borrar usuario-->
            <div class="row">
             <div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
              <div class="modal-dialog" style="width: 70%">
