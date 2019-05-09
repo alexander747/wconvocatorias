@@ -811,8 +811,8 @@
 
 
              <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
-                  <!-- /row modal actualizar Usuario-->
-            <div class="row">
+             <!-- /row modal actualizar Usuario-->
+             <div class="row">
               <div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                <div class="modal-dialog modal-lg">
                 <div class="modal-content" >
@@ -945,6 +945,7 @@
 
                    <div>
                     <input type="hidden" id="accion" name="accion" value="3">
+                    <input type="hidden" name="actidusuario" id="actidusuario">
                    </div>
 
 
@@ -960,179 +961,179 @@
              </div>
              <!-- /fin row modal actualizar-->
 
-           <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+             <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
 
-           <!-- /row modal borrar usuario-->
-           <div class="row">
-            <div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-             <div class="modal-dialog" style="width: 70%">
-              <div class="modal-content" >
-               <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Borrar Usuario</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-               </div>
-               <form id="frmDatos3" method="POST" enctype="multipart/form-data" >
-                <div class="modal-body">
-
-                 <div class="form-group">
-                  <label for="message-text" class="control-label">¿Esta seguro que desea eliminar el usuario? </label>
+             <!-- /row modal borrar usuario-->
+             <div class="row">
+              <div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+               <div class="modal-dialog" style="width: 70%">
+                <div class="modal-content" >
+                 <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">Borrar Usuario</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                  </div>
+                 <form id="frmDatos3" method="POST" enctype="multipart/form-data" >
+                  <div class="modal-body">
 
-                 <div>
-                  <input type="hidden" id="accion" name="accion" value="2">
-                  <input type="hidden" name="idborrar" id="idborrar">
-                 </div>
+                   <div class="form-group">
+                    <label for="message-text" class="control-label">¿Esta seguro que desea eliminar el usuario? </label>
+                   </div>
+
+                   <div>
+                    <input type="hidden" id="accion" name="accion" value="2">
+                    <input type="hidden" name="idborrar" id="idborrar">
+                   </div>
 
 
-                 <div class="modal-footer">
-                  <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Cancelar</button>
-                  <button type="submit" id="actualizar-usuario2" class="btn btn-info waves-effect waves-light">Eliminar</button>
-                 </div>
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" id="actualizar-usuario2" class="btn btn-info waves-effect waves-light">Eliminar</button>
+                   </div>
+                  </div>
+                 </form>
                 </div>
-               </form>
+               </div>
+              </div>
+             </div>
+             <!-- /fin row modal -->
+
+
+
+            </div>
+
+
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+            <div class="right-sidebar">
+             <div class="slimscrollright">
+              <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+              <div class="r-panel-body">
+               <ul id="themecolors" class="m-t-20">
+                <li><b>With Light sidebar</b></li>
+                <li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-red" class="red-theme">3</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme working">4</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme">5</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme">6</a></li>
+                <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
+                <li><a href="javascript:void(0)" data-skin="skin-default-dark" class="default-dark-theme ">7</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-green-dark" class="green-dark-theme">8</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-blue-dark" class="blue-dark-theme">10</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-purple-dark" class="purple-dark-theme">11</a></li>
+                <li><a href="javascript:void(0)" data-skin="skin-megna-dark" class="megna-dark-theme ">12</a></li>
+               </ul>
+               <ul class="m-t-20 chatonline">
+                <li><b>Chat option</b></li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                </li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                </li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                </li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                </li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                </li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                </li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                </li>
+                <li>
+                 <a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                </li>
+               </ul>
               </div>
              </div>
             </div>
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
            </div>
-           <!-- /fin row modal -->
-
-
-
-          </div>
-
-
-          <!-- ============================================================== -->
-          <!-- End PAge Content -->
-          <!-- ============================================================== -->
-          <!-- ============================================================== -->
-          <!-- Right sidebar -->
-          <!-- ============================================================== -->
-          <!-- .right-sidebar -->
-          <div class="right-sidebar">
-           <div class="slimscrollright">
-            <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
-            <div class="r-panel-body">
-             <ul id="themecolors" class="m-t-20">
-              <li><b>With Light sidebar</b></li>
-              <li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-red" class="red-theme">3</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme working">4</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme">5</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme">6</a></li>
-              <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-              <li><a href="javascript:void(0)" data-skin="skin-default-dark" class="default-dark-theme ">7</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-green-dark" class="green-dark-theme">8</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-blue-dark" class="blue-dark-theme">10</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-purple-dark" class="purple-dark-theme">11</a></li>
-              <li><a href="javascript:void(0)" data-skin="skin-megna-dark" class="megna-dark-theme ">12</a></li>
-             </ul>
-             <ul class="m-t-20 chatonline">
-              <li><b>Chat option</b></li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
-              </li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
-              </li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
-              </li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
-              </li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
-              </li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
-              </li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
-              </li>
-              <li>
-               <a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
-              </li>
-             </ul>
-            </div>
-           </div>
+           <!-- ============================================================== -->
+           <!-- End Container fluid  -->
+           <!-- ============================================================== -->
           </div>
           <!-- ============================================================== -->
-          <!-- End Right sidebar -->
+          <!-- End Page wrapper  -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- footer -->
+          <!-- ============================================================== -->
+
+          <footer class="footer text-center"> &copy; UNIVIDA </footer>
+          <!-- ============================================================== -->
+          <!-- End footer -->
           <!-- ============================================================== -->
          </div>
          <!-- ============================================================== -->
-         <!-- End Container fluid  -->
+         <!-- End Wrapper -->
          <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-
-        <footer class="footer text-center"> &copy; UNIVIDA </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
-       </div>
-       <!-- ============================================================== -->
-       <!-- End Wrapper -->
-       <!-- ============================================================== -->
-       <!-- ============================================================== -->
-       <!-- All Jquery -->
-       <!-- ============================================================== -->
-       <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
-       <!-- Bootstrap tether Core JavaScript -->
-       <script src="../assets/node_modules/popper/popper.min.js"></script>
-       <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-       <!-- slimscrollbar scrollbar JavaScript -->
-       <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
-       <!--Wave Effects -->
-       <script src="dist/js/waves.js"></script>
-       <!--Menu sidebar -->
-       <script src="dist/js/sidebarmenu.js"></script>
-       <!--Custom JavaScript -->
-       <script src="dist/js/custom.min.js"></script>
-       <!-- This is data table -->
-       <script src="../assets/node_modules/datatables/datatables.min.js"></script>
-       <!-- start - This is for export functionality only -->
-       <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
-       <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
-       <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
-       <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
-       <!-- end - This is for export functionality only -->
+         <!-- ============================================================== -->
+         <!-- All Jquery -->
+         <!-- ============================================================== -->
+         <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+         <!-- Bootstrap tether Core JavaScript -->
+         <script src="../assets/node_modules/popper/popper.min.js"></script>
+         <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+         <!-- slimscrollbar scrollbar JavaScript -->
+         <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+         <!--Wave Effects -->
+         <script src="dist/js/waves.js"></script>
+         <!--Menu sidebar -->
+         <script src="dist/js/sidebarmenu.js"></script>
+         <!--Custom JavaScript -->
+         <script src="dist/js/custom.min.js"></script>
+         <!-- This is data table -->
+         <script src="../assets/node_modules/datatables/datatables.min.js"></script>
+         <!-- start - This is for export functionality only -->
+         <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+         <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+         <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+         <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+         <!-- end - This is for export functionality only -->
 
 
-       <!--Wave Effects -->
-       <script src="js/waves.js"></script>
-       <script src="../extends/toast-master/js/jquery.toast.js"></script>
-       <script src="js/toastr.js"></script>
+         <!--Wave Effects -->
+         <script src="js/waves.js"></script>
+         <script src="../extends/toast-master/js/jquery.toast.js"></script>
+         <script src="js/toastr.js"></script>
 
 
-       <!-- script para ajuntar desde la carpeta codigojs -->
-       <script src="codigoJs/usuarios.js"></script>
-       <!-- Plugin JavaScript -->
-       <script src="../assets/node_modules/moment/moment.js"></script>
-       <script src="../assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
-       <!-- Clock Plugin JavaScript -->
-       <script src="../assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
-       <!-- Color Picker Plugin JavaScript -->
-       <script src="../assets/node_modules/jquery-asColor/dist/jquery-asColor.js"></script>
-       <script src="../assets/node_modules/jquery-asGradient/dist/jquery-asGradient.js"></script>
-       <script src="../assets/node_modules/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
-       <!-- Date Picker Plugin JavaScript -->
-       <script src="../assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-       <!-- Date range Plugin JavaScript -->
-       <script src="../assets/node_modules/timepicker/bootstrap-timepicker.min.js"></script>
-       <script src="../assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+         <!-- script para ajuntar desde la carpeta codigojs -->
+         <script src="codigoJs/usuarios.js"></script>
+         <!-- Plugin JavaScript -->
+         <script src="../assets/node_modules/moment/moment.js"></script>
+         <script src="../assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+         <!-- Clock Plugin JavaScript -->
+         <script src="../assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
+         <!-- Color Picker Plugin JavaScript -->
+         <script src="../assets/node_modules/jquery-asColor/dist/jquery-asColor.js"></script>
+         <script src="../assets/node_modules/jquery-asGradient/dist/jquery-asGradient.js"></script>
+         <script src="../assets/node_modules/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+         <!-- Date Picker Plugin JavaScript -->
+         <script src="../assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+         <!-- Date range Plugin JavaScript -->
+         <script src="../assets/node_modules/timepicker/bootstrap-timepicker.min.js"></script>
+         <script src="../assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-       <script>
+         <script>
 							// MAterial Date picker
 							$('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
 							$('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });

@@ -59,7 +59,34 @@ switch($accion){
   //   break;
 
 
-  //   case 3: //Actualizar
+    case 3: //Actualizar usuario
+    $idusuario=$_POST['actidusuario'];
+    $nombres = $_POST['actnombreUsuario'];
+    $apellidos = $_POST['actapellidoUsuario'];
+    $tipoIdentificacion = $_POST['acttipoIdentificacionUsuario'];
+    $numeroIdentificacion = $_POST['actidentificacionUsuario'];
+    $ciudadNacimiento = $_POST['actciudadNacimiento'];
+    $ciudadResidencia = $_POST['actciudadResidencia'];
+    $fechaNacimiento = $_POST['actfechaNacimiento'];
+    $direccion = $_POST['actdireccion'];
+    $barrio = $_POST['actbarrio'];
+    $telefono = $_POST['acttelefono'];
+    $correo = $_POST['actcorreoUsuario'];
+    $nivelFormacion=$_POST['actformacionUsuario'];
+    $programa=$_POST['actprogramas'];
+    $tipoUsuario=$_POST['acttipousuario'];
+    $profesion = $_POST['actprofesion'];
+
+    $q = "UPDATE `usuarios` SET `usu_nombres`='$nombres',`usu_apellidos`='$apellidos',`usu_identificacion`='$numeroIdentificacion',`usu_tipo_identificacion`='$tipoIdentificacion',`usu_fecha_nacimiento`='$fechaNacimiento',`usu_direccion`='$direccion',`usu_barrio`='$barrio',`usu_telefono`='$telefono',`usu_correo`='$correo',`usu_nivel_formacion`='$nivelFormacion',`usu_profesion`='$profesion',`Programas_pro_id`='$programa',`tipo_usuario_tipu_id`='$tipoUsuario',`ciudad_nacimiento`='$ciudadNacimiento',`ciudad_residencia`='$ciudadResidencia' WHERE usu_id='$idusuario'";
+    $r=mysqli_query($conexion,$q);
+    if($r){
+      $informacion["respuesta"]="BIEN";
+    }else{
+      $informacion["respuesta"]="ERROR";
+    }
+    echo json_encode($informacion);
+
+    break;
   //   $nombres = $_POST['nombreUsuario2'];
   //   $apellidos = $_POST['apellidosUsuario2'];
   //   $identificacion = $_POST['identificacionUsuario2'];
@@ -101,7 +128,7 @@ switch($accion){
   //    echo json_encode($arreglo);
   //  }
   //  mysqli_free_result($resultado);
-  //  break;
+   // break;
 
    case 5: //guardar 
 
@@ -109,8 +136,6 @@ switch($accion){
    $apellidos = $_POST['apellidoUsuario'];
    $tipoIdentificacion = $_POST['tipoIdentificacionUsuario'];
    $numeroIdentificacion = $_POST['identificacionUsuario'];
-   // $deptoNacimiento=$_POST['deptonacimiento'];
-   // $deptoResidencia=$_POST['deptoresidencia'];
    $ciudadNacimiento = $_POST['ciudadNacimiento'];
    $ciudadResidencia = $_POST['ciudadResidencia'];
    $fechaNacimiento = $_POST['fechaNacimiento'];
@@ -205,11 +230,11 @@ switch($accion){
   break;
 
   case 11://cargar departamento nacimiento en actualizar 
-   $departamento=$_POST['depto'];
-   $cad='';
-   $q="SELECT * FROM departamento";
-   $r=mysqli_query($conexion,$q);
-   while ($data=mysqli_fetch_assoc($r)) {
+  $departamento=$_POST['depto'];
+  $cad='';
+  $q="SELECT * FROM departamento";
+  $r=mysqli_query($conexion,$q);
+  while ($data=mysqli_fetch_assoc($r)) {
     if($data["dep_id"]==$departamento){
       $cad.='<option value="'.$data["dep_id"].'" selected>'.$data["dep_nombre"]."</option>";
     }else{
@@ -236,11 +261,11 @@ switch($accion){
   break;
 
   case 13://cargar departamento residencia en actualizar 
-   $departamento=$_POST['depto'];
-   $cad='';
-   $q="SELECT * FROM departamento";
-   $r=mysqli_query($conexion,$q);
-   while ($data=mysqli_fetch_assoc($r)) {
+  $departamento=$_POST['depto'];
+  $cad='';
+  $q="SELECT * FROM departamento";
+  $r=mysqli_query($conexion,$q);
+  while ($data=mysqli_fetch_assoc($r)) {
     if($data["dep_id"]==$departamento){
       $cad.='<option value="'.$data["dep_id"].'" selected>'.$data["dep_nombre"]."</option>";
     }else{
@@ -253,28 +278,28 @@ switch($accion){
   case 14://cargar combo programas en actualizar
   $idprograma=$_POST['idprograma'];
   $q="SELECT * FROM programas";
-   $r=mysqli_query($conexion,$q);
-   while ($data=mysqli_fetch_assoc($r)) {
+  $r=mysqli_query($conexion,$q);
+  while ($data=mysqli_fetch_assoc($r)) {
     if($data["pro_id"]==$idprograma){
       $cad.='<option value="'.$data["pro_id"].'" selected>'.$data["pro_nombre"]."</option>";
     }else{
       $cad.='<option value="'.$data["pro_id"].'">'.$data["pro_nombre"]."</option>";
     }
   }
-echo $cad;
-break;
+  echo $cad;
+  break;
 
  case 15://cargar combo tipo usuario en actualizar
-  $id=$_POST['idtipousuario'];
-  $q="SELECT * FROM tipo_usuario";
-   $r=mysqli_query($conexion,$q);
-   while ($data=mysqli_fetch_assoc($r)) {
-    if($data["tipu_id"]==$id){
-      $cad.='<option value="'.$data["tipu_id"].'" selected>'.$data["tipu_nombre"]."</option>";
-    }else{
-      $cad.='<option value="'.$data["tipu_id"].'">'.$data["tipu_nombre"]."</option>";
-    }
+ $id=$_POST['idtipousuario'];
+ $q="SELECT * FROM tipo_usuario";
+ $r=mysqli_query($conexion,$q);
+ while ($data=mysqli_fetch_assoc($r)) {
+  if($data["tipu_id"]==$id){
+    $cad.='<option value="'.$data["tipu_id"].'" selected>'.$data["tipu_nombre"]."</option>";
+  }else{
+    $cad.='<option value="'.$data["tipu_id"].'">'.$data["tipu_nombre"]."</option>";
   }
+}
 echo $cad;
 break;
 

@@ -9,6 +9,7 @@
   listarciudadnacimientoactualizar();
   listarciudadresideciaactualizar();
   guardar();
+  guardarActualizacion();
  });
 
  var listar = function(accion){
@@ -55,6 +56,7 @@
    $("#actnombreUsuario").val(data.usu_nombres);
    $("#actcorreoUsuario").val(data.usu_correo);
    $("#actprofesion").val(data.usu_profesion);
+   $("#actidusuario").val(data.usu_id);
    
    $.ajax({
     method:"POST",
@@ -281,6 +283,26 @@
     listar(1);
     setTimeout(function(){location.reload();}, 3000);
    });
+  });
+ }
+
+ var guardarActualizacion = function(){
+  $("#frmDatos2").on("submit",function(e){
+    e.preventDefault();
+    var datos = new FormData($("#frmDatos2")[0]);
+    $.ajax({
+      method:"POST",
+      url:"registros/registro_usuario.php",
+      data:datos,
+      contentType:false,
+      processData:false,
+      cache:false,
+      success:function(respuesta){
+        var res = JSON.parse(respuesta);
+        mostrar_mensaje(res);
+        setTimeout(function(){location.reload();},3000);
+      }
+    });
   });
  }
 
