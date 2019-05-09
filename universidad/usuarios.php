@@ -727,7 +727,7 @@
                    <div class="row">
                     <div class="form-group col-md-6">
                      <label>Fecha de Nacimiento</label>
-                     <input type="date" class="form-control" name="fechaNacimiento">
+                     <input type="date" class="form-control" name="fechaNacimiento" required>
                     </div>
                     <div class="form-group col-md-6">
                      <label for="direccion" class="control-label">Direccion :</label>
@@ -742,7 +742,7 @@
                     </div>
                     <div class="form-group col-md-6">
                      <label for="telefono" class="control-label">Telefono :</label>
-                     <textarea class="form-control" id="telefono" name="telefono" style="height: 40px" required></textarea>
+                     <input type="number" class="form-control" id="telefono" name="telefono" style="height: 40px" required></input>
                     </div>
                    </div>
 
@@ -878,7 +878,7 @@
                    <div class="row">
                     <div class="form-group col-md-6">
                      <label>Fecha de Nacimiento</label>
-                     <input type="date" class="form-control" name="actfechaNacimiento" id="actfechaNacimiento">
+                     <input type="date" class="form-control" name="actfechaNacimiento" id="actfechaNacimiento" required>
                     </div>
                     <div class="form-group col-md-6">
                      <label for="direccion" class="control-label">Direccion :</label>
@@ -893,7 +893,7 @@
                     </div>
                     <div class="form-group col-md-6">
                      <label>Telefono :</label>
-                     <textarea class="form-control" id="acttelefono" name="acttelefono" style="height: 40px" required></textarea>
+                     <input type="number" class="form-control" id="acttelefono" name="acttelefono" style="height: 40px" required></input>
                     </div>
                    </div>
 

@@ -47,16 +47,16 @@ switch($accion){
 
 
 
-  //   case 2: //borrar un departamento
-  //   $id_usuario = $_POST['idborrar'];
-  //   $query = "DELETE from usuarios where usu_id = '$id_usuario'";
-  //   $resultado = mysqli_query($conexion, $query);
-  //   if (!$resultado)
-  //     $informacion["respuesta"] = "ERROR";
-  //   else
-  //     $informacion["respuesta"] = "BIEN";
-  //   echo json_encode($informacion);
-  //   break;
+    case 2: //borrar usuario
+    $id_usuario = $_POST['idborrar'];
+    $query = "DELETE from usuarios where usu_id = '$id_usuario'";
+    $resultado = mysqli_query($conexion, $query);
+    if (!$resultado)
+      $informacion["respuesta"] = "ERROR";
+    else
+      $informacion["respuesta"] = "BIEN";
+    echo json_encode($informacion);
+    break;
 
 
     case 3: //Actualizar usuario
@@ -87,33 +87,6 @@ switch($accion){
     echo json_encode($informacion);
 
     break;
-  //   $nombres = $_POST['nombreUsuario2'];
-  //   $apellidos = $_POST['apellidosUsuario2'];
-  //   $identificacion = $_POST['identificacionUsuario2'];
-  //   $Tidentificacion = $_POST['tipoIdusuario2'];
-  //   $Fnacimiento = $_POST['nacimientoUsuario2'];
-  //   $Cnacimiento = $_POST['ciudadNUsuario2'];
-  //   $Cresidencia = $_POST['ciudadRUsuario2'];
-  //   $direccion = $_POST['direccionusuario2'];
-  //   $barrio = $_POST['barrioUsuario2'];
-  //   $telefono = $_POST['telefonoUsuario2'];
-  //   $correo = $_POST['correoUsuario2'];
-  //   $Nformacion = $_POST['formacionUsuario2'];
-  //   $profesion = $_POST['Profesionusuario2'];
-  //   $Tusuario = $_POST['tipoUsuario2'];
-  //   // $password = $_POST['passwordUsuario2'];
-  //   $id = $_POST['id'];
-  //   $query = "UPDATE usuarios SET usu_nombres = '$nombres', usu_apellidos = '$apellidos',usu_identificacion = '$identificacion',
-  //   usu_tipoidentificacion = '$Tidentificacion', usu_fechaNacimiento = '$Fnacimiento', usu_ciudadNacimiento = '$Cnacimiento',
-  //   usu_ciudadResidencia = '$Cresidencia',usu_direccion = '$direccion', usu_telefono = '$telefono', usu_correo = '$correo',
-  //   usu_nivelFormacion = '$Nformacion', usu_profesion = '$profesion', usu_tipoUsuario = '$Tusuario'  WHERE usu_id = '$id'";
-  //   $resultado = mysqli_query($conexion, $query);
-  //   if (!$resultado)
-  //     $informacion["respuesta"] = "ERROR";
-  //   else
-  //     $informacion["respuesta"] = "BIEN";
-  //   echo json_encode($informacion);
-  //   break;
 
   //   case 4: //buscar departamento
   //   $id = $_POST['id'];
@@ -149,7 +122,7 @@ switch($accion){
    $profesion = $_POST['profesion'];
    $password = $_POST['password'];
 
-   $query = "SELECT * FROM usuarios where usu_identificacion= '$numeroIdentificacion'";
+   $query = "SELECT * FROM usuarios where usu_correo= '$correo'";
    $resultado = mysqli_query($conexion, $query);
    $existe = mysqli_num_rows($resultado);
    if($existe > 0){
