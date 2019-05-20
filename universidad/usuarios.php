@@ -663,7 +663,7 @@
             <div class="row">
              <!-- 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;"> -->
               <div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-               <div class="modal-dialog modal-lg">
+               <div class="modal-dialog  modal-lg">
                 <div class="modal-content" >
                  <div class="modal-header">
                   <h4 class="modal-title" id="myModalLabel">Registrar Usuario</h4>
@@ -682,6 +682,7 @@
                      <label for="message-text" class="control-label">Apellidos :</label>
                      <textarea class="form-control" id="apellidoUsuario" name="apellidoUsuario" style="height: 40px" required></textarea>
                     </div>
+
                    </div>
 
                    <div class="row">

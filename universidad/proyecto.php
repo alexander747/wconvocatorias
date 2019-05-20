@@ -634,412 +634,558 @@
 															<div class="card-body">
 
 																<!-- inicio wizard -->
-																<div class="row">
+																<div class="row" id="validation">
 																	<div class="col-12">
-																		<div class="card">
-																			<div class="card-body wizard-content">
-																				<h4 class="card-title">Step wizard</h4>
-																				<h6 class="card-subtitle">You can find the <a href="http://www.jquery-steps.com" target="_blank">offical website</a></h6>
-																				<form action="#" class="tab-wizard wizard-circle">
+																		<div class="card wizard-content">
+																			<div class="card-body">
+																				<h4 class="card-title">Información del Proyecto</h4>
+																				<form action="#" class="validation-wizard wizard-circle">
+
+
 																					<!-- Step 1 -->
-																					<h6>Información Personal</h6>
+																					<h6>Información general del Proyecto</h6>
 																					<section>
+																						<div class="row">
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="tituloProyecto"> Título del Proyecto: <span class="danger"></span> </label>
+																									<input type="text" class="form-control " id="tituloProyecto" name="tituloProyecto"> 
+																								</div>
+																							</div>
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="lineaInvestigacion" class="control-label">Linea de Investigación:</label>
+																									<select class=" form-control custom-select col-12 " id="lineaInvestigacion" name="lineaInvestigacion"></select>
+																								</div>
+																							</div>
+																						</div>
 
 																						<div class="row">
 																							<div class="col-md-6">
 																								<div class="form-group">
-																									<label for="firstName1">Nombres :</label>
-																									<input type="text" class="form-control" id="nombres" required> </div>
+																									<label for="areaInvestigacion"> Área de Investigación: <span class="danger"></span> </label>
+																									<input type="text" class="form-control " id="areaInvestigacion" name="areaInvestigacion"> 
 																								</div>
-																								<div class="col-md-6">
-																									<div class="form-group">
-																										<label for="lastName1">Apellidos :</label>
-																										<input type="text" class="form-control" id="apellidos"> </div>
-																									</div>
+																							</div>
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="subareaInvestigacion">Sub Área de Investigación: <span class="danger"></span> </label>
+																									<input type="text" class="form-control " id="subareaInvestigacion" name="subareaInvestigacion"> 
 																								</div>
-
-																								<div class="row">
-																									<div class="col-md-6">
-																										<div class="form-group">
-																											<label for="cedula">Cedula :</label>
-																											<input type="text" class="form-control" id="cedula"> </div>
-																										</div>
-																										<div class="col-md-6">
-																											<div class="form-group">
-																												<label for="date1">Fecha de Nacimiento  :</label>
-																												<input type="date" class="form-control" id="date1"> </div>
-																											</div>
-																										</div>
-
+																							</div>
+																						</div>
 
 																						<div class="row">
 																							<div class="col-md-6">
 																								<div class="form-group">
-																									<label for="ciudad">Ciudad de Nacimiento :</label>
-																									<input type="text" class="form-control" id="ciudad" required> </div>
+																									<label for="nombregrupoinvestigacion">Nombre del Grupo de Investigación: <span class="danger"></span> </label>
+																									<input type="text" class="form-control " id="nombregrupoinvestigacion" name="nombregrupoinvestigacion"> 
 																								</div>
-																								<div class="col-md-6">
-																									<div class="form-group">
-																										<label for="departamento">Departamento de Nacimiento :</label>
-																										<input type="text" class="form-control" id="departamento"> </div>
-																									</div>
-																								</div>
-
-																								<div class="row">
+																							</div>
 																							<div class="col-md-6">
 																								<div class="form-group">
-																									<label for="ciudad">Dirección Residencia :</label>
-																									<input type="text" class="form-control" id="ciudad" required> </div>
+																									<label for="directorproyecto" class="control-label">Director del Proyecto:</label>
+																									<select class=" form-control custom-select col-12 " id="directorproyecto" name="directorproyecto"></select>
+																								</div>
+																							</div>
+																						</div>
+
+																						<div class="row">
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="horassemanales">Dedicación Horas Semanales: <span class="danger"></span> </label>
+																									<input type="Number" class="form-control " id="horassemanales" name="horassemanales" min="0"> 
+																								</div>
+																							</div>
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="correo" class="control-label">Correo:</label>
+																									<input type="email" class="form-control " id="correo" name="correo">
+																								</div>
+																							</div>
+																						</div>
+
+																						<div class="row">
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="telefono">Teléfono: <span class="danger"></span> </label>
+																									<input type="Number" class="form-control " id="telefono" name="telefono" min="0"> 
+																								</div>
+																							</div>
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="duracionproyectomeses" class="control-label">Duración del Proyecto en Meses:</label>
+																									<input type="number" class="form-control " id="duracionproyectomeses" name="duracionproyectomeses" min="0">
+																								</div>
+																							</div>
+																						</div>
+
+																						<div class="row">
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="fechainicio">Fecha de Inicio: <span class="danger"></span> </label>
+																									<input type="date" class="form-control " id="fechainicio" name="fechainicio"> 
+																								</div>
+																							</div>
+																							<div class="col-md-6">
+																								<div class="form-group">
+																									<label for="fechaterminacion" class="control-label">Fecha de Terminación:</label>
+																									<input type="date" class="form-control " id="fechaterminacion" name="fechaterminacion">
+																								</div>
+																							</div>
+																						</div>
+
+																						<div class="row">
+																							<div class="col-md-12">
+																								<div class="form-group">
+																									<label for="fechainicio">Lugar de Ejecución del Proyecto: <span class="danger"></span> </label>
+																									<input type="text" class="form-control " id="fechainicio" name="fechainicio"> 
+																								</div>
+																							</div>
+
+																						</section>
+
+
+																						<!-- Step 2 -->
+																						<h6>Tipología de la Investigación</h6>
+																						<section>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="jobTitle2">¿El proyecto de investigación se formula a partir de una necesidad del nivel tecnológico? :</label>
+																										<div>
+																											<input type="radio" class="check" id="radio1" name="necesidadproyecto" data-radio="iradio_flat-red" value="1">
+																											<label for="flat-radio-1">SI</label><br>
+																											<input type="radio" class="check" id="radio2" name="necesidadproyecto" checked data-radio="iradio_flat-red" value="0">
+																											<label for="flat-radio-2">NO</label>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="jobTitle2">¿Porqué? :</label>
+																										<textarea class="form-control" id="porque" name="porque" rows="3"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-4">
+																									<div class="form-group">
+																										<label for="valortotalproyecto">Valor Total del Proyecto :</label>
+																										<input type="number" class="form-control" name="valortotalproyecto" id="valortotalproyecto" min="0">
+																									</div>
+																								</div>
+																								<div class="col-md-4">
+																									<div class="form-group">
+																										<label for="valorsolicitadofup">Valor Solicitado a la FUP (SIDI) en Efectivo :</label>
+																										<input type="number" class="form-control" name="valorsolicitadofup" id="valorsolicitadofup" min="0">
+																									</div>
+																								</div>
+																								<div class="col-md-4">
+																									<div class="form-group">
+																										<label for="valoraportadofupespecie">Valor Aportado por la FUP (SIDI) en Especie :</label>
+																										<input type="number" class="form-control" name="valoraportadofupespecie" id="valoraportadofupespecie" min="0">
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-6">
+																									<div class="form-group">
+																										<label for="jobTitle2">¿Hay otras entidades que financian el proyecto? :</label>
+																										<div>
+																											<input type="radio" class="check" id="radio3" name="entidadesfinancian" data-radio="iradio_flat-red" value="1">
+																											<label for="flat-radio-1">SI</label><br>
+																											<input type="radio" class="check" id="radio4" name="entidadesfinancian" checked data-radio="iradio_flat-red" value="0">
+																											<label for="flat-radio-2">NO</label>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="col-md-6">
+																									<div class="form-group" style="display: none" id="aparecer">
+																										<label for="jobTitle2">¿Cuantas entidades financian el proyecto? :</label>
+																										<input type="number" class="form-control" id="cuantasentidades" name="cuantasentidades" min="0">
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row" id="otrasentidades">
+																								<!-- formulario para otras entidades que financian el proyecto -->
+																							</div>
+
+
+																							<div class="row">
+																								<div class="col-md-6">
+																									<div class="form-group">
+																										<label for="jobTitle2">¿Tiene diposición de vincular al proyecto un semillero de investigación de la institución? :</label>
+																										<div>
+																											<input type="radio" class="check" id="radiovincular1" name="radiovincular" data-radio="iradio_flat-red" value="si">
+																											<label for="flat-radio-1">SI</label><br>
+																											<input type="radio" class="check" id="radiovincular2" name="radiovincular" checked data-radio="iradio_flat-red" value="no">
+																											<label for="flat-radio-2">NO</label>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="col-md-6">
+																									<div class="form-group" style="display: none" id="aparecergrupos">
+																										<label for="jobTitle2">¿En cuantos grupos de investigación piensa vincular el proyecto? :</label>
+																										<input type="number" class="form-control" id="cuantosgrupos" name="cuantosgrupos" min="0">
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row" id="otrosgrupos">
+																								<!-- formulario para incluir el proyecto dentro de grupos de la institucion-->
+																							</div>
+
+																						</section>
+
+
+																						<!-- Step 3 -->
+																						<h6>Proyecto</h6>
+																						<section>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="resumenproyecto">Resumen del proyecto :</label>
+																										<textarea class="form-control" id="resumenproyecto" name="resumenproyecto" rows="10"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="planteamientoproblema">Planteamiento del problema :</label>
+																										<textarea class="form-control" id="planteamientoproblema" name="planteamientoproblema" rows="10"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="justificacion">Justificación :</label>
+																										<textarea class="form-control" id="justificacion" name="justificacion" rows="10"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="marcoestadoarte">Marco conceptual y estado del arte :</label>
+																										<textarea class="form-control" id="marcoestadoarte" name="marcoestadoarte" rows="10"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																						</section>
+
+
+																						<!-- Step 4 -->
+																						<h6>Proyecto</h6>
+																						<section>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="objetivogeneral">Objetivo general :</label>
+																										<textarea class="form-control" id="objetivogeneral" name="objetivogeneral" rows="1"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="objetivoespecificos">Objetivos Especificos :</label>
+																										<textarea class="form-control" id="objetivoespecificos" name="objetivoespecificos" rows="3"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="metodologia">Metodología :</label>
+																										<textarea class="form-control" id="metodologia" name="metodologia" rows="8"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="actividades">Actividades a realizar:</label>
+																										<textarea class="form-control" id="actividades" name="actividades" rows="8"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																						</section>
+
+																						<!-- Step 5 -->
+																						<h6>Proyecto</h6>
+																						<section>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<div class="form-group">
+																										<label for="objetivogeneral">Objetivo general :</label>
+																										<textarea class="form-control" id="objetivogeneral" name="objetivogeneral" rows="1"></textarea>
+																									</div>
+																								</div>
+																							</div>
+
+																						
+
+																						</section>
+
+
+
+																						<!-- Step ultimo -->
+																						<h6>Step 4</h6>
+																						<section>
+																							<div class="row">
+																								<div class="col-md-6">
+																									<div class="form-group">
+																										<label for="behName1">Behaviour :</label>
+																										<input type="text" class="form-control required" id="behName1">
+																									</div>
+																									<div class="form-group">
+																										<label for="participants1">Confidance</label>
+																										<input type="text" class="form-control required" id="participants1">
+																									</div>
+																									<div class="form-group">
+																										<label for="participants1">Result</label>
+																										<select class="custom-select form-control required" id="participants1" name="location">
+																											<option value="">Select Result</option>
+																											<option value="Selected">Selected</option>
+																											<option value="Rejected">Rejected</option>
+																											<option value="Call Second-time">Call Second-time</option>
+																										</select>
+																									</div>
 																								</div>
 																								<div class="col-md-6">
 																									<div class="form-group">
-																										<label for="departamento">Barrio :</label>
-																										<input type="text" class="form-control" id="departamento"> </div>
+																										<label for="decisions1">Comments</label>
+																										<textarea name="decisions" id="decisions1" rows="4" class="form-control"></textarea>
+																									</div>
+																									<div class="form-group">
+																										<label>Rate Interviwer :</label>
+																										<div class="c-inputs-stacked">
+																											<label class="inline custom-control custom-checkbox block">
+																												<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">1 star</span> </label>
+																												<label class="inline custom-control custom-checkbox block">
+																													<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">2 star</span> </label>
+																													<label class="inline custom-control custom-checkbox block">
+																														<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">3 star</span> </label>
+																														<label class="inline custom-control custom-checkbox block">
+																															<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">4 star</span> </label>
+																															<label class="inline custom-control custom-checkbox block">
+																																<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">5 star</span> </label>
+																															</div>
+																														</div>
+																													</div>
+																												</div>
+																											</section>
+																										</form>
 																									</div>
 																								</div>
+																							</div>
+																						</div>
+																						<!-- fin wizard-->
 
 
-																										<div class="row">
-																											<div class="col-md-6">
-																												<div class="form-group">
-																													<label for="emailAddress1">Email Address :</label>
-																													<input type="email" class="form-control" id="emailAddress1"> </div>
-																												</div>
-																												<div class="col-md-6">
-																													<div class="form-group">
-																														<label for="phoneNumber1">Phone Number :</label>
-																														<input type="tel" class="form-control" id="phoneNumber1"> </div>
-																													</div>
-																												</div>
-																												<div class="row">
-																													<div class="col-md-6">
-																														<div class="form-group">
-																															<label for="location1">Select City :</label>
-																															<select class="custom-select form-control" id="location1" name="location">
-																																<option value="">Select City</option>
-																																<option value="Amsterdam">India</option>
-																																<option value="Berlin">USA</option>
-																																<option value="Frankfurt">Dubai</option>
-																															</select>
-																														</div>
-																													</div>
-																													<div class="col-md-6">
-																														<div class="form-group">
-																															<label for="date1">Date of Birth :</label>
-																															<input type="date" class="form-control" id="date1"> </div>
-																														</div>
-																													</div>
-																												</section>
-																												<!-- Step 2 -->
-																												<h6>Job Status</h6>
-																												<section>
-																													<div class="row">
-																														<div class="col-md-6">
-																															<div class="form-group">
-																																<label for="jobTitle1">Job Title :</label>
-																																<input type="text" class="form-control" id="jobTitle1"> </div>
-																															</div>
-																															<div class="col-md-6">
-																																<div class="form-group">
-																																	<label for="videoUrl1">Company Name :</label>
-																																	<input type="text" class="form-control" id="videoUrl1">
-																																</div>
-																															</div>
-																															<div class="col-md-12">
-																																<div class="form-group">
-																																	<label for="shortDescription1">Job Description :</label>
-																																	<textarea name="shortDescription" id="shortDescription1" rows="6" class="form-control"></textarea>
-																																</div>
-																															</div>
-																														</div>
-																													</section>
-																													<!-- Step 3 -->
-																													<h6>Interview</h6>
-																													<section>
-																														<div class="row">
-																															<div class="col-md-6">
-																																<div class="form-group">
-																																	<label for="int1">Interview For :</label>
-																																	<input type="text" class="form-control" id="int1"> </div>
-																																	<div class="form-group">
-																																		<label for="intType1">Interview Type :</label>
-																																		<select class="custom-select form-control" id="intType1" data-placeholder="Type to search cities" name="intType1">
-																																			<option value="Banquet">Normal</option>
-																																			<option value="Fund Raiser">Difficult</option>
-																																			<option value="Dinner Party">Hard</option>
-																																		</select>
-																																	</div>
-																																	<div class="form-group">
-																																		<label for="Location1">Location :</label>
-																																		<select class="custom-select form-control" id="Location1" name="location">
-																																			<option value="">Select City</option>
-																																			<option value="India">India</option>
-																																			<option value="USA">USA</option>
-																																			<option value="Dubai">Dubai</option>
-																																		</select>
-																																	</div>
-																																</div>
-																																<div class="col-md-6">
-																																	<div class="form-group">
-																																		<label for="jobTitle2">Interview Date :</label>
-																																		<input type="date" class="form-control" id="jobTitle2">
-																																	</div>
-																																	<div class="form-group">
-																																		<label>Requirements :</label>
-																																		<div class="c-inputs-stacked">
-																																			<label class="inline custom-control custom-checkbox block">
-																																				<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Employee</span> </label>
-																																				<label class="inline custom-control custom-checkbox block">
-																																					<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Contract</span> </label>
-																																				</div>
-																																			</div>
-																																		</div>
-																																	</div>
-																																</section>
-																																
-																																<!-- Step 4 -->
-																																<h6>Remark</h6>
-																																<section>
-																																	<div class="row">
-																																		<div class="col-md-6">
-																																			<div class="form-group">
-																																				<label for="behName1">Behaviour :</label>
-																																				<input type="text" class="form-control" id="behName1">
-																																			</div>
-																																			<div class="form-group">
-																																				<label for="participants1">Confidance</label>
-																																				<input type="text" class="form-control" id="participants1">
-																																			</div>
-																																			<div class="form-group">
-																																				<label for="participants1">Result</label>
-																																				<select class="custom-select form-control" id="participants1" name="location">
-																																					<option value="">Select Result</option>
-																																					<option value="Selected">Selected</option>
-																																					<option value="Rejected">Rejected</option>
-																																					<option value="Call Second-time">Call Second-time</option>
-																																				</select>
-																																			</div>
-																																		</div>
-																																		<div class="col-md-6">
-																																			<div class="form-group">
-																																				<label for="decisions1">Comments</label>
-																																				<textarea name="decisions" id="decisions1" rows="4" class="form-control"></textarea>
-																																			</div>
-																																			<div class="form-group">
-																																				<label>Rate Interviwer :</label>
-																																				<div class="c-inputs-stacked">
-																																					<label class="inline custom-control custom-checkbox block">
-																																						<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">1 star</span> </label>
-																																						<label class="inline custom-control custom-checkbox block">
-																																							<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">2 star</span> </label>
-																																							<label class="inline custom-control custom-checkbox block">
-																																								<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">3 star</span> </label>
-																																								<label class="inline custom-control custom-checkbox block">
-																																									<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">4 star</span> </label>
-																																									<label class="inline custom-control custom-checkbox block">
-																																										<input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">5 star</span> </label>
-																																									</div>
-																																								</div>
-																																							</div>
-																																						</div>
-																																					</section>
-																																				</form>
-																																			</div>
-																																		</div>
-																																	</div>
-																																</div>
-																																<!-- fin wizard-->
-
-
-																															</div>
-																														</div>
-																													</div>
-																												</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
 
 
 
-																											</div><!--fin Container fluid  -->
+																	</div><!--fin Container fluid  -->
 
 
-																											<!-- ============================================================== -->
-																											<!-- End PAge Content -->
-																											<!-- ============================================================== -->
-																											<!-- ============================================================== -->
-																											<!-- Right sidebar -->
-																											<!-- ============================================================== -->
-																											<!-- .right-sidebar -->
-																											<div class="right-sidebar">
-																												<div class="slimscrollright">
-																													<div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
-																													<div class="r-panel-body">
-																														<ul id="themecolors" class="m-t-20">
-																															<li><b>With Light sidebar</b></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-red" class="red-theme">3</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme working">4</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme">5</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme">6</a></li>
-																															<li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-default-dark" class="default-dark-theme ">7</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-green-dark" class="green-dark-theme">8</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-blue-dark" class="blue-dark-theme">10</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-purple-dark" class="purple-dark-theme">11</a></li>
-																															<li><a href="javascript:void(0)" data-skin="skin-megna-dark" class="megna-dark-theme ">12</a></li>
-																														</ul>
-																														<ul class="m-t-20 chatonline">
-																															<li><b>Chat option</b></li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
-																															</li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
-																															</li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
-																															</li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
-																															</li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
-																															</li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
-																															</li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
-																															</li>
-																															<li>
-																																<a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
-																															</li>
-																														</ul>
-																													</div>
-																												</div>
-																											</div>
-																											<!-- ============================================================== -->
-																											<!-- End Right sidebar -->
-																											<!-- ============================================================== -->
-																										</div>
-																										<!-- ============================================================== -->
-																										<!-- End Container fluid  -->
-																										<!-- ============================================================== -->
-																									</div>
-																									<!-- ============================================================== -->
-																									<!-- End Page wrapper  -->
-																									<!-- ============================================================== -->
-																									<!-- ============================================================== -->
-																									<!-- footer -->
-																									<!-- ============================================================== -->
+																	<!-- ============================================================== -->
+																	<!-- End PAge Content -->
+																	<!-- ============================================================== -->
+																	<!-- ============================================================== -->
+																	<!-- Right sidebar -->
+																	<!-- ============================================================== -->
+																	<!-- .right-sidebar -->
+																	<div class="right-sidebar">
+																		<div class="slimscrollright">
+																			<div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+																			<div class="r-panel-body">
+																				<ul id="themecolors" class="m-t-20">
+																					<li><b>With Light sidebar</b></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-red" class="red-theme">3</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme working">4</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme">5</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme">6</a></li>
+																					<li class="d-block m-t-30"><b>With Dark sidebar</b></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-default-dark" class="default-dark-theme ">7</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-green-dark" class="green-dark-theme">8</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-blue-dark" class="blue-dark-theme">10</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-purple-dark" class="purple-dark-theme">11</a></li>
+																					<li><a href="javascript:void(0)" data-skin="skin-megna-dark" class="megna-dark-theme ">12</a></li>
+																				</ul>
+																				<ul class="m-t-20 chatonline">
+																					<li><b>Chat option</b></li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+																					</li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+																					</li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+																					</li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+																					</li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+																					</li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+																					</li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+																					</li>
+																					<li>
+																						<a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- ============================================================== -->
+																	<!-- End Right sidebar -->
+																	<!-- ============================================================== -->
+																</div>
+																<!-- ============================================================== -->
+																<!-- End Container fluid  -->
+																<!-- ============================================================== -->
+															</div>
+															<!-- ============================================================== -->
+															<!-- End Page wrapper  -->
+															<!-- ============================================================== -->
+															<!-- ============================================================== -->
+															<!-- footer -->
+															<!-- ============================================================== -->
 
-																									<footer class="footer text-center"> &copy; UNIVIDA </footer>
-																									<!-- ============================================================== -->
-																									<!-- End footer -->
-																									<!-- ============================================================== -->
-																								</div>
-																								<!-- ============================================================== -->
-																								<!-- End Wrapper -->
-																								<!-- ============================================================== -->
-																								<!-- ============================================================== -->
-																								<!-- All Jquery -->
-																								<!-- ============================================================== -->
-																								<script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
-																								<!-- Bootstrap tether Core JavaScript -->
-																								<script src="../assets/node_modules/popper/popper.min.js"></script>
-																								<script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-																								<!-- slimscrollbar scrollbar JavaScript -->
-																								<script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
-																								<!--Wave Effects -->
-																								<script src="dist/js/waves.js"></script>
-																								<!--Menu sidebar -->
-																								<script src="dist/js/sidebarmenu.js"></script>
-																								<!--Custom JavaScript -->
-																								<script src="dist/js/custom.min.js"></script>
-																								<!-- This is data table -->
-																								<script src="../assets/node_modules/datatables/datatables.min.js"></script>
-																								<!-- start - This is for export functionality only -->
-																								<script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
-																								<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
-																								<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-																								<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
-																								<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
-																								<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
-																								<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
-																								<!-- end - This is for export functionality only -->
-
-
-																								<!--Wave Effects -->
-																								<script src="js/waves.js"></script>
-																								<script src="../extends/toast-master/js/jquery.toast.js"></script>
-																								<script src="js/toastr.js"></script>
+															<footer class="footer text-center"> &copy; UNIVIDA </footer>
+															<!-- ============================================================== -->
+															<!-- End footer -->
+															<!-- ============================================================== -->
+														</div>
+														<!-- ============================================================== -->
+														<!-- End Wrapper -->
+														<!-- ============================================================== -->
+														<!-- ============================================================== -->
+														<!-- All Jquery -->
+														<!-- ============================================================== -->
+														<script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+														<!-- Bootstrap tether Core JavaScript -->
+														<script src="../assets/node_modules/popper/popper.min.js"></script>
+														<script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+														<!-- slimscrollbar scrollbar JavaScript -->
+														<script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+														<!--Wave Effects -->
+														<script src="dist/js/waves.js"></script>
+														<!--Menu sidebar -->
+														<script src="dist/js/sidebarmenu.js"></script>
+														<!--Custom JavaScript -->
+														<script src="dist/js/custom.min.js"></script>
+														<!-- This is data table -->
+														<script src="../assets/node_modules/datatables/datatables.min.js"></script>
+														<!-- start - This is for export functionality only -->
+														<script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+														<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+														<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+														<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+														<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+														<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+														<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+														<!-- end - This is for export functionality only -->
 
 
-																								<!-- script para ajuntar desde la carpeta codigojs -->
+														<!--Wave Effects -->
+														<script src="js/waves.js"></script>
+														<script src="../extends/toast-master/js/jquery.toast.js"></script>
+														<script src="js/toastr.js"></script>
 
 
-
-																								<!-- This Page JS -->
-																								<script src="../assets/node_modules/wizard/jquery.steps.min.js"></script>
-																								<script src="../assets/node_modules/wizard/jquery.validate.min.js"></script>
-																								<script src="../assets/node_modules/sweetalert/sweetalert.min.js"></script>
-																								<script>
-//Custom design form example
-$(".tab-wizard").steps({
-	headerTag: "h6",
-	bodyTag: "section",
-	transitionEffect: "fade",
-	titleTemplate: '<span class="step">#index#</span> #title#',
-	labels: {
-		finish: "Submit"
-	},
-	onFinished: function (event, currentIndex) {
-		swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-
-	}
-});
+														<!-- script para ajuntar desde la carpeta codigojs -->
+														<script src="codigoJs/proyecto.js"></script>
 
 
-var form = $(".validation-wizard").show();
+														<!-- This Page JS -->
+														<script src="../assets/node_modules/wizard/jquery.steps.min.js"></script>
+														<script src="../assets/node_modules/wizard/jquery.validate.min.js"></script>
+														<script src="../assets/node_modules/sweetalert/sweetalert.min.js"></script>
 
-$(".validation-wizard").steps({
-	headerTag: "h6",
-	bodyTag: "section",
-	transitionEffect: "fade",
-	titleTemplate: '<span class="step">#index#</span> #title#',
-	labels: {
-		finish: "Submit"
-	},
-	onStepChanging: function (event, currentIndex, newIndex) {
-		return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
-	},
-	onFinishing: function (event, currentIndex) {
-		return form.validate().settings.ignore = ":disabled", form.valid()
-	},
-	onFinished: function (event, currentIndex) {
-		swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-	}
-}), $(".validation-wizard").validate({
-	ignore: "input[type=hidden]",
-	errorClass: "text-danger",
-	successClass: "text-success",
-	highlight: function (element, errorClass) {
-		$(element).removeClass(errorClass)
-	},
-	unhighlight: function (element, errorClass) {
-		$(element).removeClass(errorClass)
-	},
-	errorPlacement: function (error, element) {
-		error.insertAfter(element)
-	},
-	rules: {
-		email: {
-			email: !0
-		}
-	}
-})
-</script>
+														<script >
+																		//Custom design form example
+																		$(".tab-wizard").steps({
+																			headerTag: "h6",
+																			bodyTag: "section",
+																			transitionEffect: "fade",
+																			titleTemplate: '<span class="step">#index#</span> #title#',
+																			labels: {
+																				finish: "Submit"
+																			},
+																			onFinished: function (event, currentIndex) {
+																				swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
 
+																			}
+																		});
+
+
+																		var form = $(".validation-wizard").show();
+
+																		$(".validation-wizard").steps({
+																			headerTag: "h6",
+																			bodyTag: "section",
+																			transitionEffect: "fade",
+																			titleTemplate: '<span class="step">#index#</span> #title#',
+																			labels: {
+																				finish: "Submit"
+																			},
+																			onStepChanging: function (event, currentIndex, newIndex) {
+																				return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
+																			},
+																			onFinishing: function (event, currentIndex) {
+																				return form.validate().settings.ignore = ":disabled", form.valid()
+																			},
+																			onFinished: function (event, currentIndex) {
+																				swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+																			}
+																		}), $(".validation-wizard").validate({
+																			ignore: "input[type=hidden]",
+																			errorClass: "text-danger",
+																			successClass: "text-success",
+																			highlight: function (element, errorClass) {
+																				$(element).removeClass(errorClass)
+																			},
+																			unhighlight: function (element, errorClass) {
+																				$(element).removeClass(errorClass)
+																			},
+																			errorPlacement: function (error, element) {
+																				error.insertAfter(element)
+																			},
+																			rules: {
+																				email: {
+																					email: !0
+																				}
+																			}
+																		})
+																	</script>
 
 
 <!--  <script>
